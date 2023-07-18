@@ -28,7 +28,7 @@
 <meta property="og:description" content="This page intends for testing whether the equation renderer works. Bessel’s Problem\text{Calculate:}\ \ \ \ \zeta(2)&#x3D;\sum\limits_{n&#x3D;1}^{\infty}\frac{1}{n^2}A primary solution: $\forall x\in ( 0,\frac{">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-13T10:52:17.000Z">
-<meta property="article:modified_time" content="2023-07-18T15:00:20.381Z">
+<meta property="article:modified_time" content="2023-07-18T15:24:21.458Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Mathematics">
 <meta name="twitter:card" content="summary">
@@ -183,7 +183,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-18 15:00:20" itemprop="dateModified" datetime="2023-07-18T15:00:20+00:00">2023-07-18</time>
+                <time title="Modified: 2023-07-18 15:24:21" itemprop="dateModified" datetime="2023-07-18T15:24:21+00:00">2023-07-18</time>
               </span>
 
           
@@ -199,20 +199,20 @@
       
         <p><span style="color:red">This page intends for testing whether the equation renderer works.</span></p>
 <h2 id="Bessel’s-Problem"><a href="#Bessel’s-Problem" class="headerlink" title="Bessel’s Problem"></a>Bessel’s Problem</h2><script type="math/tex; mode=display">\text{Calculate:}\ \ \ \ \zeta(2)=\sum\limits_{n=1}^{\infty}\frac{1}{n^2}</script><p>A primary solution:</p>
-<p>$\forall x\in ( 0,\frac{\pi}{2}),$  We have  $sin(x)&lt;x&lt;tan(x)$</p>
-<p>$\therefore \frac{1}{tanx}&lt;\frac{1}{x}&lt;\frac{1}{sinx}\Rightarrow cot^2x&lt;\frac{1}{x^2}&lt;1+cot^2x$</p>
+<p>$\forall x\in ( 0,\frac{\pi}{2}),$  We have  $\sin (x)\lt x\lt\tan (x)$</p>
+<p>$\Rightarrow \frac{1}{\tan x}&lt;\frac{1}{x}&lt;\frac{1}{\sin x}\Rightarrow \cot ^2x&lt;\frac{1}{x^2}&lt;1+\cot ^2x$</p>
 <p>Let  $x_k=\frac{k\pi}{2n+1}$</p>
-<p>Consider equation<br>$(cotx+i)^{2n+1}=(costx-i)^{2n+1}$</p>
-<p>$\Leftrightarrow 2i(C_{2n+1}^1cot^{2n}x-C_{2n+1}^3cot^{2n-2}x+C_{2n+1}^5cot^{2n-4}x-\cdots+(-1)^nC_{2n+1}^{2n+1}cot^0x)=0$</p>
-<p>$\Leftrightarrow C_{2n+1}^1cot^{2n}x-C_{2n+1}^3cot^{2n-2}x+C_{2n+1}^5cot^{2n-4}x-\cdots+(-1)^nC_{2n+1}^{2n+1}=0$</p>
-<p>On the other hand, we have<br>$cos2x+isin2x=\frac{cot^2x-1}{cot^2x+1}+i\frac{2cotx}{cot^2x+1}=\frac{(cotx+i)^2}{(cotx+i)(cotx-i)}=\frac{cotx+i}{cotx-i}\Rightarrow (cos2x+isin2x)^{2n+1}(cotx-i)^{2n+1}=(cotx+i)^{2n+1}$</p>
-<p>If we have $x=x_k,k=1,2,\cdots,n$ thus $(cos2x+isin2x)^{2n+1}=1$</p>
-<p>consider the equation<br>$C_{2n+1}^1cot^{2n}x-C_{2n+1}^3cot^{2n-2}x+C_{2n+1}^5cot^{2n-4}x-\cdots+(-1)^nC_{2n+1}^{2n+1}=0$<br>to be the polynomial equation of $cot^2x$, thus it is a $n$ power polynomial equation and have at most $n$ different roots.</p>
-<p>Apparently, these $n$ roots are $cot^2x_k,k=1,2,\cdots,n$</p>
-<p>With Vieta Formula, we have $\sum\limits_{k=1}^{n}cot^2x_k=\sum\limits_{k=1}^{n}cot^2\frac{k\pi}{2n+1}=\frac{C_{2n+1}^3}{C_{2n+1}^1}=\frac{n(2n-1)}{3}$</p>
-<p>$\sum\limits_{k=1}^ncot^2x_k&lt;\sum\limits_{k=1}^n\frac{1}{x_k^2}&lt;\sum\limits_{k=1}^n(cot^2x_k+1)$</p>
-<p>$\therefore \frac{n(2n-1)}{3}&lt;(2n+1)^2\sum\limits_{k=1}^n\frac{1}{\pi^2 k^2}&lt;\frac{n(2n-1)}{3}+n\Leftrightarrow \frac{n(2n-1)\pi^2}{3(2n+1)^2}&lt;\sum\limits_{k=1}^n\frac{1}{k^2}&lt;\frac{n(2n+2)\pi^2}{3(2n+1)^2}$</p>
-<p>$\therefore \lim\limits_{n\to \infty}\sum\limits_{k=1}^n\frac{1}{k^2}=\frac{\pi^2}{6}$</p>
+<p>Consider equation<br>$(\cot x+i)^{2n+1}=(\cot x-i)^{2n+1}$</p>
+<p>$\Leftrightarrow 2i(C_{2n+1}^1\cot ^{2n}x-C_{2n+1}^3\cot ^{2n-2}x+C_{2n+1}^5\cot ^{2n-4}x-\cdots+(-1)^nC_{2n+1}^{2n+1}\cot ^0x)=0$</p>
+<p>$\Leftrightarrow C_{2n+1}^1\cot ^{2n}x-C_{2n+1}^3\cot ^{2n-2}x+C_{2n+1}^5\cot ^{2n-4}x-\cdots+(-1)^nC_{2n+1}^{2n+1}=0$</p>
+<p>On the other hand, we have<br>$\cos 2x+i\sin 2x=\frac{\cot ^2x-1}{\cot ^2x+1}+i\frac{2\cot x}{\cot ^2x+1}=\frac{(\cot x+i)^2}{(\cot x+i)(\cot x-i)}=\frac{\cot x+i}{\cot x-i}\Rightarrow (\cos 2x+i\sin 2x)^{2n+1}(\cot x-i)^{2n+1}=(\cot x+i)^{2n+1}$</p>
+<p>If we have $x=x_k,k=1,2,\cdots,n$ thus $(\cos 2x+i\sin 2x)^{2n+1}=1$</p>
+<p>consider the equation<br>$C_{2n+1}^1\cot ^{2n}x-C_{2n+1}^3\cot ^{2n-2}x+C_{2n+1}^5\cot ^{2n-4}x-\cdots+(-1)^nC_{2n+1}^{2n+1}=0$<br>to be the polynomial equation of $\cot ^2x$, thus it is a $n$ power polynomial equation and have at most $n$ different roots.</p>
+<p>Apparently, these $n$ roots are $\cot ^2x_k,k=1,2,\cdots,n$</p>
+<p>With Vieta Formula, we have $\sum\limits_{k=1}^{n}\cot ^2x_k=\sum\limits_{k=1}^{n}\cot ^2\frac{k\pi}{2n+1}=\frac{C_{2n+1}^3}{C_{2n+1}^1}=\frac{n(2n-1)}{3}$</p>
+<p>$\sum\limits_{k=1}^n\cot ^2x_k&lt;\sum\limits_{k=1}^n\frac{1}{x_k^2}&lt;\sum\limits_{k=1}^n(\cot ^2x_k+1)$</p>
+<p>$\Rightarrow \frac{n(2n-1)}{3}&lt;(2n+1)^2\sum\limits_{k=1}^n\frac{1}{\pi^2 k^2}&lt;\frac{n(2n-1)}{3}+n\Leftrightarrow \frac{n(2n-1)\pi^2}{3(2n+1)^2}&lt;\sum\limits_{k=1}^n\frac{1}{k^2}&lt;\frac{n(2n+2)\pi^2}{3(2n+1)^2}$</p>
+<p>$\Rightarrow \lim\limits_{n\to \infty}\sum\limits_{k=1}^n\frac{1}{k^2}=\frac{\pi^2}{6}$</p>
 
     </div>
 
