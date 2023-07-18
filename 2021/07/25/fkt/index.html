@@ -20,20 +20,21 @@
     var CONFIG = {"hostname":"pscgylotti.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="This page intends for testing whether the equation renderer works. Bessel’s Problem\text{Calculate:}\ \ \ \ \zeta(2)&#x3D;\sum\limits_{n&#x3D;1}^{\infty}\frac{1}{n^2}A primary solution: $\forall x\in ( 0,\frac{">
+  <meta name="description" content="Intro to the problemDomino Tiling QuestionQuestion DescriptionAssuming we have a regular lattice board of size $m\times n$ (provided that $2\mid mn$).  A perfect coverage is to completely covering the">
 <meta property="og:type" content="article">
-<meta property="og:title" content="A Primary Solution to Bessel&#39;s Problem">
-<meta property="og:url" content="https://pscgylotti.github.io/2020/05/13/bessel/index.html">
+<meta property="og:title" content="Fisher-Kasteleyn-Temperley Algorithm">
+<meta property="og:url" content="https://pscgylotti.github.io/2021/07/25/fkt/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="This page intends for testing whether the equation renderer works. Bessel’s Problem\text{Calculate:}\ \ \ \ \zeta(2)&#x3D;\sum\limits_{n&#x3D;1}^{\infty}\frac{1}{n^2}A primary solution: $\forall x\in ( 0,\frac{">
+<meta property="og:description" content="Intro to the problemDomino Tiling QuestionQuestion DescriptionAssuming we have a regular lattice board of size $m\times n$ (provided that $2\mid mn$).  A perfect coverage is to completely covering the">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-13T10:52:17.000Z">
+<meta property="article:published_time" content="2021-07-25T23:44:51.000Z">
 <meta property="article:modified_time" content="2023-07-18T17:35:44.627Z">
 <meta property="article:author" content="Pscgylotti">
 <meta property="article:tag" content="Mathematics">
+<meta property="article:tag" content="Algorithm">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://pscgylotti.github.io/2020/05/13/bessel/">
+<link rel="canonical" href="https://pscgylotti.github.io/2021/07/25/fkt/">
 
 
 <script id="page-configurations">
@@ -46,7 +47,7 @@
   };
 </script>
 
-  <title>A Primary Solution to Bessel's Problem | Hexo</title>
+  <title>Fisher-Kasteleyn-Temperley Algorithm | Hexo</title>
   
 
 
@@ -153,7 +154,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pscgylotti.github.io/2020/05/13/bessel/">
+    <link itemprop="mainEntityOfPage" href="https://pscgylotti.github.io/2021/07/25/fkt/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -166,7 +167,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          A Primary Solution to Bessel's Problem
+          Fisher-Kasteleyn-Temperley Algorithm
         </h1>
 
         <div class="post-meta">
@@ -176,7 +177,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-05-13 10:52:17" itemprop="dateCreated datePublished" datetime="2020-05-13T10:52:17+00:00">2020-05-13</time>
+              <time title="Created: 2021-07-25 23:44:51" itemprop="dateCreated datePublished" datetime="2021-07-25T23:44:51+00:00">2021-07-25</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -197,22 +198,40 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><span style="color:red">This page intends for testing whether the equation renderer works.</span></p>
-<h2 id="Bessel’s-Problem"><a href="#Bessel’s-Problem" class="headerlink" title="Bessel’s Problem"></a>Bessel’s Problem</h2><script type="math/tex; mode=display">\text{Calculate:}\ \ \ \ \zeta(2)=\sum\limits_{n=1}^{\infty}\frac{1}{n^2}</script><p>A primary solution:</p>
-<p>$\forall x\in ( 0,\frac{\pi}{2}),$  We have  $\sin (x)\lt x\lt\tan (x)$</p>
-<p>$\Rightarrow \frac{1}{\tan x}&lt;\frac{1}{x}&lt;\frac{1}{\sin x}\Rightarrow \cot ^2x&lt;\frac{1}{x^2}&lt;1+\cot ^2x$</p>
-<p>Let  $x_k=\frac{k\pi}{2n+1}$</p>
-<p>Consider equation<br>$(\cot x+i)^{2n+1}=(\cot x-i)^{2n+1}$</p>
-<p>$\Leftrightarrow 2i(C_{2n+1}^1\cot ^{2n}x-C_{2n+1}^3\cot ^{2n-2}x+C_{2n+1}^5\cot ^{2n-4}x-\cdots+(-1)^nC_{2n+1}^{2n+1}\cot ^0x)=0$</p>
-<p>$\Leftrightarrow C_{2n+1}^1\cot ^{2n}x-C_{2n+1}^3\cot ^{2n-2}x+C_{2n+1}^5\cot ^{2n-4}x-\cdots+(-1)^nC_{2n+1}^{2n+1}=0$</p>
-<p>On the other hand, we have<br>$\cos 2x+i\sin 2x=\frac{\cot ^2x-1}{\cot ^2x+1}+i\frac{2\cot x}{\cot ^2x+1}=\frac{(\cot x+i)^2}{(\cot x+i)(\cot x-i)}=\frac{\cot x+i}{\cot x-i}\Rightarrow (\cos 2x+i\sin 2x)^{2n+1}(\cot x-i)^{2n+1}=(\cot x+i)^{2n+1}$</p>
-<p>If we have $x=x_k,k=1,2,\cdots,n$ thus $(\cos 2x+i\sin 2x)^{2n+1}=1$</p>
-<p>consider the equation<br>$C_{2n+1}^1\cot ^{2n}x-C_{2n+1}^3\cot ^{2n-2}x+C_{2n+1}^5\cot ^{2n-4}x-\cdots+(-1)^nC_{2n+1}^{2n+1}=0$<br>to be the polynomial equation of $\cot ^2x$, thus it is a $n$ power polynomial equation and have at most $n$ different roots.</p>
-<p>Apparently, these $n$ roots are $\cot ^2x_k,k=1,2,\cdots,n$</p>
-<p>With Vieta Formula, we have $\sum\limits_{k=1}^{n}\cot ^2x_k=\sum\limits_{k=1}^{n}\cot ^2\frac{k\pi}{2n+1}=\frac{C_{2n+1}^3}{C_{2n+1}^1}=\frac{n(2n-1)}{3}$</p>
-<p>$\sum\limits_{k=1}^n\cot ^2x_k&lt;\sum\limits_{k=1}^n\frac{1}{x_k^2}&lt;\sum\limits_{k=1}^n(\cot ^2x_k+1)$</p>
-<p>$\Rightarrow \frac{n(2n-1)}{3}&lt;(2n+1)^2\sum\limits_{k=1}^n\frac{1}{\pi^2 k^2}&lt;\frac{n(2n-1)}{3}+n\Leftrightarrow \frac{n(2n-1)\pi^2}{3(2n+1)^2}&lt;\sum\limits_{k=1}^n\frac{1}{k^2}&lt;\frac{n(2n+2)\pi^2}{3(2n+1)^2}$</p>
-<p>$\Rightarrow \lim\limits_{n\to \infty}\sum\limits_{k=1}^n\frac{1}{k^2}=\frac{\pi^2}{6}$</p>
+        <h2 id="Intro-to-the-problem"><a href="#Intro-to-the-problem" class="headerlink" title="Intro to the problem"></a>Intro to the problem</h2><h3 id="Domino-Tiling-Question"><a href="#Domino-Tiling-Question" class="headerlink" title="Domino Tiling Question"></a>Domino Tiling Question</h3><h4 id="Question-Description"><a href="#Question-Description" class="headerlink" title="Question Description"></a>Question Description</h4><p>Assuming we have a regular lattice board of size $m\times n$ (provided that $2\mid mn$). </p>
+<p>A perfect coverage is to completely covering the entire board with $1\times 2$ tiles which guaranteeing no extra parts and no overlap.</p>
+<p>We want to know there are how many different perfect coverages (Let it be $f(m,n)$).</p>
+<h4 id="Degenerate-Case"><a href="#Degenerate-Case" class="headerlink" title="Degenerate Case"></a>Degenerate Case</h4><p>Provided $m=1$, we can easily derive that $f(1,n)=1$.</p>
+<p>Provided $m=2$, by simply assuming two states of the last two columns, we know that $f(2,n)=f(2,n-1)+f(2,n-2),f(2,1)=1,f(2,2)=2$, which is reduced to the Fibonacci Series.</p>
+<h4 id="Dynamic-Programming"><a href="#Dynamic-Programming" class="headerlink" title="Dynamic Programming"></a>Dynamic Programming</h4><p>Otherwise considering the cases how does a grid at $k$-th row get covered:</p>
+<ol>
+<li>Get covered by a vertical tile spans $k$-th and $k+1$-th row ;</li>
+<li>Get covered by a vertical tile spans $k-1$-th and $k$-th row ;</li>
+<li>Get covered by a horizontal tile.</li>
+</ol>
+<p>In fact, we can treat case 2 and 3 as the same state, since they share the truth that they do not “protrude to the next row”.</p>
+<p>we use $0$ denote case 1, and $1$ for case 2 and 3. For each row of the board, we can write its state string down like:</p>
+<script type="math/tex; mode=display">r_i=\cdots 10000111\cdots</script><p>However, two gird with adjacent rows and same column cannot take state $0$ simultaneously, which means:</p>
+<script type="math/tex; mode=display">r_{i} | r_{i+1} =\cdots 11111111 \cdots</script><p>here “|” denotes the bitwise <strong>OR</strong> operation.</p>
+<p>Now we try to traverse the board line by line.</p>
+<p>For grid at $i$-th row $j$-th column (marked as $(i,j)$):</p>
+<ul>
+<li>If $(i,j)$ have been determined, skip to $(i,j+1)$</li>
+<li>If $(i-1,j)$ takes $0$, $(i,j)$ automatically takes $1$, and then we consider $(i,j+1)$ ;</li>
+<li>If $(i-1,j)$ takes $1$ :</li>
+<li><ul>
+<li>We put a horizontal tile and $(i,j),(i,j+1)$ both take $1$ , the next one to be considered is $(i,j+2)$<br>(Note that we are traversing the board line by line. if $(i,j)$ is covered by a horizontal tile spans $j-1$-th and $j$-th column<br>it must have been skipped when we were considering $(i,j-1)$. We cannot choose this way when $j=n$) ;+—+</li>
+</ul>
+</li>
+<li><ul>
+<li>We put a vertical tile and $(i,j)$ takes $0$, $(i+1,j)$ takes $1$. The next one to be considered is $(i,j+1)$ .</li>
+</ul>
+</li>
+</ul>
+<p>(Assuming a simple extension that $(i,n+1)$ automatically transforming into $ (i+1,1)$.)</p>
+<p>Apparently a legal collection of state strings $\lbrack r_1,r_2,\cdots,r_m\rbrack$ determines only one perfect coverage,<br>and a perfect coverage takes a fixed collection of state strings.</p>
+<p>The last row must takes all-ones state ($r_n=\cdots 11111111 \cdots$).</p>
+<p>Now setting $DP(i,r_i)$ representing the amount of different perfect coverages when $i$-th row taking state string of $r_i$.</p>
 
     </div>
 
@@ -223,6 +242,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
+              <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
           </div>
 
         
@@ -230,11 +250,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/07/25/fkt/" rel="next" title="Fisher-Kasteleyn-Temperley Algorithm">
-      Fisher-Kasteleyn-Temperley Algorithm <i class="fa fa-chevron-right"></i>
+    <a href="/2020/05/13/bessel/" rel="prev" title="A Primary Solution to Bessel's Problem">
+      <i class="fa fa-chevron-left"></i> A Primary Solution to Bessel's Problem
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -293,7 +313,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bessel%E2%80%99s-Problem"><span class="nav-number">1.</span> <span class="nav-text">Bessel’s Problem</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro-to-the-problem"><span class="nav-number">1.</span> <span class="nav-text">Intro to the problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Domino-Tiling-Question"><span class="nav-number">1.1.</span> <span class="nav-text">Domino Tiling Question</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Question-Description"><span class="nav-number">1.1.1.</span> <span class="nav-text">Question Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Degenerate-Case"><span class="nav-number">1.1.2.</span> <span class="nav-text">Degenerate Case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamic-Programming"><span class="nav-number">1.1.3.</span> <span class="nav-text">Dynamic Programming</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
