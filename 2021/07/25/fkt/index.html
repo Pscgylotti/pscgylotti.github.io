@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://pscgylotti.github.io/images/Directional.svg">
 <meta property="article:published_time" content="2021-07-25T23:44:51.000Z">
-<meta property="article:modified_time" content="2023-07-19T14:17:56.850Z">
+<meta property="article:modified_time" content="2023-07-19T14:55:33.470Z">
 <meta property="article:author" content="Pscgylotti">
 <meta property="article:tag" content="Mathematics">
 <meta property="article:tag" content="Algorithm">
@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-19 14:17:56" itemprop="dateModified" datetime="2023-07-19T14:17:56+00:00">2023-07-19</time>
+                <time title="Modified: 2023-07-19 14:55:33" itemprop="dateModified" datetime="2023-07-19T14:55:33+00:00">2023-07-19</time>
               </span>
 
           
@@ -271,9 +271,15 @@
 <p>We can compute determinat with <strong>Gaussian Elimination</strong> in $\mathcal O(n^3)$, but it is hard to find an efficient algorithm for calculating permanent.</p>
 <h3 id="Pfaffian"><a href="#Pfaffian" class="headerlink" title="Pfaffian"></a>Pfaffian</h3><p>Now we abandon the bipartite adjacency matrix and return to the normal adjacency matrix. The perfect match amount for a $n,n$-bipartite graph is given by:</p>
 <script type="math/tex; mode=display">\text{PerfectMatch}(G)=\frac{1}{2^nn!}\sum\limits_{\sigma\in S_{2n}}\prod\limits_{i=1}^na_{\sigma(2i-1),\sigma(2i)}</script><p>However, since it is bipartite, we can reorder the vertices of $V=V_1\cup V_2$ such that the $1$-th till $n$-th vertices belong to $V_1$ and $n+1$-th till $2n$-th vertices belong to $V_2$. Under the new order,the adjacency martix takes the form of:</p>
-<script type="math/tex; mode=display">\left\lbrack\begin{matrix}\boldsymbol O&\boldsymbol{BiA}\\ \boldsymbol{BiA}^T&O\end{matrix}\right\rbrack</script><p>The bipartite adjacency matrix returns again. Clearly we have $\text{perm}(\boldsymbol A)=\text{perm}(\boldsymbol{BiA})^2$ (for any two additive terms $\prod\limits_{i=1}^na_{i,\sigma_1(i)}$ and $\prod\limits_{i=1}^na_{i,\sigma_2(i)}$ in $\text{perm}(\boldsymbol{BiA})$, there exists additive term $\left(\prod\limits_{i=1}^na_{i,\sigma_s(i)}\right)^2$ and $\prod\limits_{i=1}^na_{i,\sigma_1(i)}\cdot\prod\limits_{i=1}^na_{i,\sigma_2(i)}$ in $\text{perm}(\boldsymbol A)$).</p>
+<script type="math/tex; mode=display">\left\lbrack\begin{matrix}\boldsymbol O&\boldsymbol{BiA}\\ \boldsymbol{BiA}^T&O\end{matrix}\right\rbrack</script><p>The bipartite adjacency matrix returns again. Clearly we have $\text{perm}(\boldsymbol A)=\text{perm}(\boldsymbol{BiA})^2$ (for any two additive terms $\prod\limits_{i=1}^na_{i,\sigma_1(i)}$ and $\prod\limits_{i=1}^na_{i,\sigma_2(i)}$ in $\text{perm}(\boldsymbol{BiA})$, there exists additive terms $\left(\prod\limits_{i=1}^na_{i,\sigma_s(i)}\right)^2$ for $s\in\lbrace 1,2\rbrace$ and two $\left(\prod\limits_{i=1}^na_{i,\sigma_1(i)}\cdot\prod\limits_{i=1}^na_{i,\sigma_2(i)}\right)$ in $\text{perm}(\boldsymbol A)$).</p>
 <p>Here we introduce the <strong>Pfaffian</strong>.</p>
-<p>We<br><img src="/images/Directional.svg" alt="Directing"></p>
+<p>Consider an even-dimensional antisymmetric matrix $\boldsymbol A=(a_{i,j})_{2n\times 2n}$ ($\boldsymbol A+\boldsymbol A^T=\boldsymbol O$), the pfaffian of A is given by:</p>
+<script type="math/tex; mode=display">\text{pf}(\boldsymbol A)=\frac{1}{2^nn!}\sum\limits_{\sigma\in S_{2n}}\text{sgn}(\sigma)\prod\limits_{i=1}^na_{\sigma(2i-1),\sigma(2i)}</script><p>This looks a bit familiar, it differs from perfect match amount only by a signature factor on each additive term.</p>
+<p>We can prove that $\text{pf}^2(\boldsymbol A)=\text{det}(\boldsymbol A)$:</p>
+<h4 id="Prove"><a href="#Prove" class="headerlink" title="Prove"></a>Prove</h4><p>At first, we prove that for an even-dimentional complex invertible antisymmetric matrix $\boldsymbol A_{2n\times 2n}$, there exist an invertible matrix $\boldsymbol P$ such that:</p>
+<script type="math/tex; mode=display">\boldsymbol  A=\boldsymbol P^T\boldsymbol J\boldsymbol P</script><p>where $\boldsymbol J_{2n\times 2n}$ is given by:</p>
+<script type="math/tex; mode=display">\boldsymbol J=\text{diag}\left\lbrack\underbrace{\left(\begin{matrix}0&1\\-1&0\end{matrix}\right),\left(\begin{matrix}0&1\\-1&0\end{matrix}\right),\cdots,\left(\begin{matrix}0&1\\-1&0\end{matrix}\right)}_{n}\right\rbrack</script><p>and for non-even or singular even $A$ case, also exists an invertible matrix $\boldsymbol P$ such that:</p>
+<p><img src="/images/Directional.svg" alt="Directing"></p>
 
     </div>
 
@@ -357,7 +363,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro-to-the-problem"><span class="nav-number">1.</span> <span class="nav-text">Intro to the problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Domino-Tiling-Question"><span class="nav-number">1.1.</span> <span class="nav-text">Domino Tiling Question</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Question-Description"><span class="nav-number">1.1.1.</span> <span class="nav-text">Question Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Degenerate-Case"><span class="nav-number">1.1.2.</span> <span class="nav-text">Degenerate Case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamic-Programming"><span class="nav-number">1.1.3.</span> <span class="nav-text">Dynamic Programming</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bipartite-Planar-Graph"><span class="nav-number">1.2.</span> <span class="nav-text">Bipartite Planar Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Permanent"><span class="nav-number">1.3.</span> <span class="nav-text">Permanent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pfaffian"><span class="nav-number">1.4.</span> <span class="nav-text">Pfaffian</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro-to-the-problem"><span class="nav-number">1.</span> <span class="nav-text">Intro to the problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Domino-Tiling-Question"><span class="nav-number">1.1.</span> <span class="nav-text">Domino Tiling Question</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Question-Description"><span class="nav-number">1.1.1.</span> <span class="nav-text">Question Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Degenerate-Case"><span class="nav-number">1.1.2.</span> <span class="nav-text">Degenerate Case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamic-Programming"><span class="nav-number">1.1.3.</span> <span class="nav-text">Dynamic Programming</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bipartite-Planar-Graph"><span class="nav-number">1.2.</span> <span class="nav-text">Bipartite Planar Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Permanent"><span class="nav-number">1.3.</span> <span class="nav-text">Permanent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pfaffian"><span class="nav-number">1.4.</span> <span class="nav-text">Pfaffian</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Prove"><span class="nav-number">1.4.1.</span> <span class="nav-text">Prove</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
