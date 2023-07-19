@@ -28,7 +28,7 @@
 <meta property="og:description" content="Intro to the problemDomino Tiling QuestionQuestion DescriptionAssuming we have a regular lattice board of size $m\times n$ (provided that $2\mid mn$).  A perfect coverage is to completely covering the">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-25T23:44:51.000Z">
-<meta property="article:modified_time" content="2023-07-19T09:30:11.036Z">
+<meta property="article:modified_time" content="2023-07-19T10:14:36.723Z">
 <meta property="article:author" content="Pscgylotti">
 <meta property="article:tag" content="Mathematics">
 <meta property="article:tag" content="Algorithm">
@@ -184,7 +184,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-19 09:30:11" itemprop="dateModified" datetime="2023-07-19T09:30:11+00:00">2023-07-19</time>
+                <time title="Modified: 2023-07-19 10:14:36" itemprop="dateModified" datetime="2023-07-19T10:14:36+00:00">2023-07-19</time>
               </span>
 
           
@@ -212,7 +212,7 @@
 <p>In fact, we can treat case 2 and 3 as the same state, since they share the truth that they do not “protrude to the next row”.</p>
 <p>we use $0$ denote case 1, and $1$ for case 2 and 3. For each row of the board, we can write its state string down like:</p>
 <script type="math/tex; mode=display">r_i=\cdots 10000111\cdots</script><p>However, two gird with adjacent rows and same column cannot take state $0$ simultaneously (a so-called double $0$ conflit), which means:</p>
-<script type="math/tex; mode=display">r_{i} | r_{i+1} =\cdots 11111111 \cdots</script><p>here “|” denotes the bitwise <strong>OR</strong> operation.</p>
+<script type="math/tex; mode=display">r_{i} | r_{i+1} =\underbrace{\cdots 11111111\cdots}_{\text{all is 1}}</script><p>here “|” denotes the bitwise <strong>OR</strong> operation.</p>
 <p>Now we try to traverse the board line by line.</p>
 <p>For grid at $i$-th row $j$-th column (marked as $(i,j)$):</p>
 <ul>
@@ -241,9 +241,12 @@
 </li>
 <li>for any searching state with $l=n$ rightly, record its state string pair as a compatible state pair and stop jumping to next state. (if $l=n+1$, do not record it, since it is an illegal form.)</li>
 </ul>
-<p>We can easily write down the searching split tree equation as $f(l)=2f(l+1)+f(l+2),f(n)=1$ and a trivial transformation $f(l)+(\sqrt2-1)f(l+1)=(\sqrt2+1)\left\lbrack f(l+1)+(\sqrt2-1)f(l+2)\right\rbrack$ which implies the above searching algorithm has a temporal complexity of $\mathcal O\left((\sqrt2+1)^n\right)$</p>
+<p>We can easily write down the searching split tree equation as $f(l)=2f(l+1)+f(l+2),f(n)=1$ and a trivial transformation $f(l)+(\sqrt2-1)f(l+1)=(\sqrt2+1)\left\lbrack f(l+1)+(\sqrt2-1)f(l+2)\right\rbrack$ which implies the above searching algorithm has a temporal complexity of $\mathcal O\left((\sqrt2+1)^n\right)$ .</p>
 <p>The record of all compatible string pairs is marked as $CSP=\left\lbrace(s_1,s_2)_1,(s_1,s_2)_2,(s_1,s_2)_3,\cdots,(s_1,s_2)_p\right\rbrace$ where p is the amount of all compatible string pairs.</p>
-<p>Now setting $DP(i,r_i)$ representing the amount of different perfect coverages (till $i$-th row) when $i$-th row taking state string of $r_i$.</p>
+<p>Now setting $DP(i,r_i)$ representing the amount of different perfect coverages (till $i$-th row, that is to say the $1$-th to $i$-th rows are all fulfilled with no conflicts) when $i$-th row taking state string of $r_i$.</p>
+<p>We can initiate $DP(0,r_0)$ as:</p>
+<p><script type="math/tex">DP(0,r_0)=\left\lbrace\begin{aligned}1,\text{if}~r_0=\underbrace{\cdots 111111\cdots}_{\text{all is 1}}\\0, \text{Otherwise.}\end{aligned}\right</script> ,</p>
+<p>since this is a compatible extension, as “$0$-th” row would not protrude to $1$-th row if it takes all state 1. </p>
 
     </div>
 
