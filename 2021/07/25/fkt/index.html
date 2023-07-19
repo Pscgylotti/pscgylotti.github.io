@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://pscgylotti.github.io/images/Directional.svg">
 <meta property="article:published_time" content="2021-07-25T23:44:51.000Z">
-<meta property="article:modified_time" content="2023-07-19T17:43:40.974Z">
+<meta property="article:modified_time" content="2023-07-19T18:23:47.173Z">
 <meta property="article:author" content="Pscgylotti">
 <meta property="article:tag" content="Mathematics">
 <meta property="article:tag" content="Algorithm">
@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-19 17:43:40" itemprop="dateModified" datetime="2023-07-19T17:43:40+00:00">2023-07-19</time>
+                <time title="Modified: 2023-07-19 18:23:47" itemprop="dateModified" datetime="2023-07-19T18:23:47+00:00">2023-07-19</time>
               </span>
 
           
@@ -287,8 +287,8 @@
 <p>Because $\text{rank}(\boldsymbol A)\geq\text{rank}(\boldsymbol V)$, so we can apply series of paired elementary operations such that :</p>
 <script type="math/tex; mode=display">(\boldsymbol Q\cdots)^T\boldsymbol A\boldsymbol (\boldsymbol Q\cdots)=\left\lbrack\begin{matrix}\boldsymbol U'_{2\times 2}&\boldsymbol O_{2\times (d-2)}\\ \boldsymbol O_{(d-2)\times 2}&\boldsymbol V'_{(d-2)\times (d-2)}\end{matrix}\right\rbrack</script><p>and then scale $V’$ to $\left(\begin{matrix}0&amp;1\\ -1&amp;0\end{matrix}\right)$:</p>
 <script type="math/tex; mode=display">(\boldsymbol Q\cdots)^T\boldsymbol A\boldsymbol (\boldsymbol Q\cdots)=\left\lbrack\begin{matrix}0&1&0&\cdots&0\\ -1&0&0&\cdots&0\\ 0&0&\ddots&\cdots&\cdots\\ \vdots&\vdots&\vdots&\ddots& \\ 0&0&\vdots&&\ddots \end{matrix}\right\rbrack</script><p>With this result, the original statement is proved recursively.</p>
-<p>Now we can write down that $\text{det}(\boldsymbol A)=\text{det}(\boldsymbol P^T\boldsymbol J\boldsymbol P)=\text{det}^2(\boldsymbol P)\text{det}(\boldsymbol J)=\text{det}^2(\boldsymbol P)$.</p>
-<p>While term $a_{i,j}$ can be written as:</p>
+<p>Now we can write down that </p>
+<script type="math/tex; mode=display">\text{det}(\boldsymbol A)=\text{det}(\boldsymbol P^T\boldsymbol J\boldsymbol P)=\text{det}^2(\boldsymbol P)\text{det}(\boldsymbol J)=\text{det}^2(\boldsymbol P)</script><p>While term $a_{i,j}$ can be written as:</p>
 <script type="math/tex; mode=display">\begin{aligned}a_{i,j}&=\sum\limits_{k=1}^{2n}\sum\limits_{l=1}^{2n}(p^T)_{i,k}j_{k,l}p_{l,j}=\sum\limits_{k=1}^{2n}\sum\limits_{l=1}^{2n}p_{k,i}j_{k,l}p_{l,j}\\ &=\sum\limits_{k=1}^n\left(p_{2k-1,i}p_{2k,j}-p_{2k,i}p_{2k-1,j}\right)\end{aligned}</script><p>Consider the property of one single additive term with form $p_{2k-1,i}p_{2k,j}-p_{2k,i}p_{2k-1,j}$ inside the pfaffian summation definition, then each additive term with form $p_{2k-1,i}p_{2k,j}-p_{2k,i}p_{2k-1,j}$ especially for a fixed $k$ inside the production will take the form like (here we detect what will happen when two factors in the production have the same k):</p>
 <script type="math/tex; mode=display">\begin{aligned}\sum\limits_{\sigma\in S_{2n}}&\text{sgn}(\sigma)\left(p_{2k-1,i_1}p_{2k,i_2}-p_{2k-1,i_2}p_{2k,i_1}\right)\left(p_{2k-1,i_3}p_{2k,i_4}-p_{2k-1,i_4}p_{2k,i_3}\right)\\ &\left(p_{2k_3-1,i_5}p_{2k_3,i_6}-p_{2k_3-1,i_6}p_{2k_3,i_5}\right)\times\cdots\times\left(p_{2k_n-1,i_{2n-1}}p_{2k_n,i_{2n}}-p_{2k_n-1,i_{2n}}p_{2k_n,i_{2n-1}}\right)\\ =0\end{aligned}</script><p>(here we abbreviate $\sigma(t)$ as $i_t$)</p>
 <p>The zero outcome is derived by noting that if we swap $i_1$ and $i_3$ or $i_2$ and $i_4$, which then causing the signature to flip one times, will generate opposite component and elinimate each others.</p>
@@ -297,15 +297,24 @@
 <h3 id="Fisher-Kasteleyn-Temperley-Algorithm"><a href="#Fisher-Kasteleyn-Temperley-Algorithm" class="headerlink" title="Fisher-Kasteleyn-Temperley Algorithm"></a>Fisher-Kasteleyn-Temperley Algorithm</h3><p>Since the pfaffian differs from perfect match amount only by a signature factor, we now give each edge of the BPG a direction, and change the adjacency matrix into directional adjacency matrix $\boldsymbol A^*=(a_{i,j})_{2n\times 2n}$ with rules:</p>
 <ul>
 <li>$a^*_{i,j}=-1$ when there exists edge $v_i\to v_j$ ;</li>
-<li>$a^*_{i,j}=1$ when there exists edge $v_j\to v_i$$ ;</li>
+<li>$a^*_{i,j}=1$ when there exists edge $v_j\to v_i$ ;</li>
 <li>$a^*_{i,j}=0$ when there is no edge relating $v_i$ with $v_j$.</li>
 </ul>
-<p>If we can find an orientation for a BPG such that the signature introduced by orientation happens to be same with $\text{sgn}(\sigma)$, thus we can calculate $\sqrt{\text{det}(\boldsymbol A^<em>)}=\text{pf}(\boldsymbol A^</em>)=\text{PerfectMatch}(\boldsymbol A)$ with temporal complexity of $\mathcal O (n^3)$.</p>
-<p>An additive factor $\text{sgn}(\sigma)\prod\limits_{i=1}^na_{\sigma(2i-1),\sigma(2i)}$ is non-zero if and only if $(\sigma(1),\sigma(2)),(\sigma(3),\sigma(4)),\cdots,(\sigma(2n-1),\sigma(2n))$ is a perfect match.</p>
+<p>If we can find an orientation for a BPG such that the signature introduced by orientation happens to be same with $\text{sgn}(\sigma)$, thus we can calculate $\sqrt{\text{det}(\boldsymbol A^<em>)}=|\text{pf}(\boldsymbol A^</em>)|=\text{PerfectMatch}(\boldsymbol A)$ with temporal complexity of $\mathcal O (n^3)$.</p>
+<p>An additive factor $\text{sgn}(\sigma)\prod\limits_{i=1}^na_{\sigma(2i-1),\sigma(2i)}$ is non-zero if and only if </p>
+<script type="math/tex; mode=display">(\sigma(1),\sigma(2)),(\sigma(3),\sigma(4)),\cdots,(\sigma(2n-1),\sigma(2n))</script><p>is a perfect match.</p>
 <p>Consider an orientation strategy as:</p>
 <ul>
-<li>Since there is no odd cycle, when we traverse the cycle clockwise, we can orient edges on the cycle with odd amount of </li>
+<li>Since there is no odd cycle, when we traverse any cycle clockwise, we can orient edges on the cycle with odd amount of edges in the same direction and odd amount of edges in the opposite direction (We call this state a double-odd state);</li>
+<li>We can first choose a cycle and orient each edge of it till reaching double-odd state, and then choose another cycle share edges with it (still requires double-odd). Untill all cycles have been oriented.</li>
+<li>The double-odd state is extensive, since, when you conjunct two cycle into a larger one, the edges of same and opposite direction are vanishing in pairs, so all the cycles can reach double-odd together.</li>
+<li>Edge does not belong to any cycle can be treated arbitrarily since their matching is fixed (from the leave vertex one by one).</li>
 </ul>
+<p>In fact, there are only two type of matching states on an even cycle (imagine a coloring method of alternately applying two color to the even cycle).</p>
+<p>We can simply denote the two perfect match as:</p>
+<script type="math/tex; mode=display">(1,2),(3,4),\cdots,(2n-1,2n)</script><p>and</p>
+<script type="math/tex; mode=display">(2,3),(4,5),\cdots,(2n-2,2n-1),(2n,1)</script><p>For both states, a half of the edges are chosen and because of the double-odd property, their directional signature is opposite, while their permutation signature is opposite too. Thus, their final signature keep same.</p>
+<p>Also, this property of single even cycle can be easily extended to conjunction of them.</p>
 <p><img src="/images/Directional.svg" alt="Directing"></p>
 
     </div>
