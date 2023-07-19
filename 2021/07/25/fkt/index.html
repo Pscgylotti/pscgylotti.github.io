@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://pscgylotti.github.io/images/Directional.svg">
 <meta property="article:published_time" content="2021-07-25T23:44:51.000Z">
-<meta property="article:modified_time" content="2023-07-19T17:13:15.472Z">
+<meta property="article:modified_time" content="2023-07-19T17:14:47.690Z">
 <meta property="article:author" content="Pscgylotti">
 <meta property="article:tag" content="Mathematics">
 <meta property="article:tag" content="Algorithm">
@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-19 17:13:15" itemprop="dateModified" datetime="2023-07-19T17:13:15+00:00">2023-07-19</time>
+                <time title="Modified: 2023-07-19 17:14:47" itemprop="dateModified" datetime="2023-07-19T17:14:47+00:00">2023-07-19</time>
               </span>
 
           
@@ -292,7 +292,7 @@
 <script type="math/tex; mode=display">\begin{aligned}a_{i,j}&=\sum\limits_{k=1}^{2n}\sum\limits_{l=1}^{2n}(p^T)_{i,k}j_{k,l}p_{l,j}=\sum\limits_{k=1}^{2n}\sum\limits_{l=1}^{2n}p_{k,i}j_{k,l}p_{l,j}\\ &=\sum\limits_{k=1}^n\left(p_{2k-1,i}p_{2k,j}-p_{2k,i}p_{2k-1,j}\right)\end{aligned}</script><p>Consider the property of one single additive term with form $p_{2k-1,i}p_{2k,j}-p_{2k,i}p_{2k-1,j}$ inside the pfaffian summation definition, then each additive term with form $p_{2k-1,i}p_{2k,j}-p_{2k,i}p_{2k-1,j}$ especially for a fixed $k$ inside the production will take the form like (here we detect what will happen when two factors in the production have the same k):</p>
 <script type="math/tex; mode=display">\begin{aligned}\sum\limits_{\sigma\in S_{2n}}&\text{sgn}(\sigma)\left(p_{2k-1,i_1}p_{2k,i_2}-p_{2k-1,i_2}p_{2k,i_1}\right)\left(p_{2k-1,i_3}p_{2k,i_4}-p_{2k-1,i_4}p_{2k,i_3}\right)\\ &\left(p_{2k_3-1,i_5}p_{2k_3,i_6}-p_{2k_3-1,i_6}p_{2k_3,i_5}\right)\times\cdots\times\left(p_{2k_n-1,i_{2n-1}}p_{2k_n,i_{2n}}-p_{2k_n-1,i_{2n}}p_{2k_n,i_{2n-1}}\right)\\ =0\end{aligned}</script><p>The zero outcome is derived by noting that if we swap $i_1$ and $i_3$ or $i_2$ and $i_4$, which then causing the signature to flip one times, will generate opposite component and elinimate each others.</p>
 <p>So all the $k$ inside each factor shall be different in order to avoid vanishing inside the summation. It follows that:</p>
-<script type="math/tex; mode=display">\begin{aligned}\text{pf}(\boldsymbol A)&=\frac{1]{2^nn!}\sum\limits_{\sigma\in S_{2n}}\text{sgn}(\sigma)\prod\limits_{s=1}^n\left(p_{2i-1,i_{2i-1}}p_{2i,i_{2i}}-p_{2i-1,i_{2i}}p_{2i,i_{2i-1}}\right)\\ &=\sum\limits_{1\leq i_1,i_2,\cdots,i_{2n}\leq 2n}\varepsilon_{i_1i_2\cdots i_{2n}}\prod\limits_{j=1}^{2n}p_{j,i_j}\\ &=\text{det}\boldsymbol P\end{aligned}</script><p><img src="/images/Directional.svg" alt="Directing"></p>
+<script type="math/tex; mode=display">\begin{aligned}\text{pf}(\boldsymbol A)&=\frac{1}{2^nn!}\sum\limits_{\sigma\in S_{2n}}\text{sgn}(\sigma)\prod\limits_{s=1}^n\left(p_{2i-1,i_{2i-1}}p_{2i,i_{2i}}-p_{2i-1,i_{2i}}p_{2i,i_{2i-1}}\right)\\ &=\sum\limits_{1\leq i_1,i_2,\cdots,i_{2n}\leq 2n}\varepsilon_{i_1i_2\cdots i_{2n}}\prod\limits_{j=1}^{2n}p_{j,i_j}\\ &=\text{det}\boldsymbol P\end{aligned}</script><p><img src="/images/Directional.svg" alt="Directing"></p>
 
     </div>
 
