@@ -178,7 +178,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-19 15:45:20" itemprop="dateModified" datetime="2023-07-19T15:45:20+00:00">2023-07-19</time>
+                <time title="Modified: 2023-07-19 16:10:10" itemprop="dateModified" datetime="2023-07-19T16:10:10+00:00">2023-07-19</time>
               </span>
 
           
@@ -228,7 +228,7 @@
 <li>We define the searching state as $(s_1,s_2,l)$ where $l\in\lbrace 0,1,\cdots,n\rbrace$. Assuming $s_1=a_1a_2a_3\cdots a_n,s_2=b_1b_2b_3\cdots b_n$, $l$ denotes that $a_1a_2\cdots a_l$ and $b_1b_2\cdots b_l$ is determined, while $a_{l+1}a_{l+2}\cdots a_n$ and $b_{l+1}b_{l+2}\cdots b_n$ remain undetermined;</li>
 <li>We start from state $(X,X,0)$ (since $l=0$ implies no state is determined, we use $X$ denotes a casual state);</li>
 <li>When it cames to state $(s_1=a_1a_2\cdots a_n,s_2=b_1b_2\cdots b_n,l)$ the next hops are:<ul>
-<li>$(s_1\mid_{a_{l+1}=1,a_{l+2}=1},s_2\mid_{b_{l+1}=1,b_{l+2}=1},l+2)$ (If we put a horizontal tile at $i+1$-th row spans $l+1$-th column and $l+2$-th column ,then $a_{i+1}$ and $a_{i+2}$ must not take $0$ ,or the vertical tile will protrude into the horizontal one) ;</li>
+<li>$(s_1\mid_{a_{l+1}=1,a_{l+2}=1},s_2\mid_{b_{l+1}=1,b_{l+2}=1},l+2)$ (If we put a horizontal tile at $i+1$-th row spans $l+1$-th column and $l+2$-th column , then $a_{i+1}$ and $a_{i+2}$ must not take $0$ , or the vertical tile will protrude into the horizontal one) ;</li>
 <li>$(s_1\mid_{a_{l+1}=0},s_2\mid_{b_{l+1}=1},l+1)$ (place a vertical tile spans $i$-th row and $i+1$-th row) ;</li>
 <li>$(s_1\mid_{a_{l+1}=1},s_2\mid_{b_{l+1}=0},l+1)$ (place a vertical tile spans $i+1$-th row and $i+2$-th row).</li>
 </ul>
@@ -259,8 +259,8 @@
 <script type="math/tex; mode=display">\text{perm}(\boldsymbol A)=\sum\limits_{\sigma\in S_n}\prod\limits_{i=1}^n(-1) a_{i,\sigma(i)}</script><p>This is the so-called <strong>Permanent</strong>. For a Bipartite Adjacency Matrix $\boldsymbol{BiA}$, the perfect match number is equal to its permanet $perm(\boldsymbol{BiA})$.</p>
 <p>This is trivial in fact since the permanent just try each case of the permutation brute-forcely, with a temporal complexity $\mathcal O(n!)$</p>
 <p>We can compute determinat with <strong>Gaussian Elimination</strong> in $\mathcal O(n^3)$, but it is hard to find an efficient algorithm for calculating permanent.</p>
-<h3 id="Pfaffian"><a href="#Pfaffian" class="headerlink" title="Pfaffian"></a>Pfaffian</h3><p>Now we abandon the bipartite adjacency matrix and return to the normal adjacency matrix. The perfect match amount for a $n,n$-bipartite graph is given by:</p>
-<script type="math/tex; mode=display">\text{PerfectMatch}(G)=\frac{1}{2^nn!}\sum\limits_{\sigma\in S_{2n}}\prod\limits_{i=1}^na_{\sigma(2i-1),\sigma(2i)}</script><p>However, since it is bipartite, we can reorder the vertices of $V=V_1\cup V_2$ such that the $1$-th till $n$-th vertices belong to $V_1$ and $n+1$-th till $2n$-th vertices belong to $V_2$. Under the new order,the adjacency martix takes the form of:</p>
+<h3 id="Pfaffian"><a href="#Pfaffian" class="headerlink" title="Pfaffian"></a>Pfaffian</h3><p>Now we abandon the bipartite adjacency matrix and return to the normal adjacency matrix $\boldsymbol A$. The perfect match amount for a $n,n$-bipartite graph is given by:</p>
+<script type="math/tex; mode=display">\text{PerfectMatch}(\boldsymbol A)=\frac{1}{2^nn!}\sum\limits_{\sigma\in S_{2n}}\prod\limits_{i=1}^na_{\sigma(2i-1),\sigma(2i)}</script><p>However, since it is bipartite, we can reorder the vertices of $V=V_1\cup V_2$ such that the $1$-th till $n$-th vertices belong to $V_1$ and $n+1$-th till $2n$-th vertices belong to $V_2$. Under the new order, the adjacency martix takes the form of:</p>
 <script type="math/tex; mode=display">\left\lbrack\begin{matrix}\boldsymbol O&\boldsymbol{BiA}\\ \boldsymbol{BiA}^T&O\end{matrix}\right\rbrack</script><p>The bipartite adjacency matrix returns again. Clearly we have $\text{perm}(\boldsymbol A)=\text{perm}(\boldsymbol{BiA})^2$ (for any two additive terms $\prod\limits_{i=1}^na_{i,\sigma_1(i)}$ and $\prod\limits_{i=1}^na_{i,\sigma_2(i)}$ in $\text{perm}(\boldsymbol{BiA})$, there exists additive terms $\left(\prod\limits_{i=1}^na_{i,\sigma_s(i)}\right)^2$ for $s\in\lbrace 1,2\rbrace$ and two $\left(\prod\limits_{i=1}^na_{i,\sigma_1(i)}\cdot\prod\limits_{i=1}^na_{i,\sigma_2(i)}\right)$ in $\text{perm}(\boldsymbol A)$).</p>
 <p>Here we introduce the <strong>Pfaffian</strong>.</p>
 <p>Consider an even-dimensional antisymmetric matrix $\boldsymbol A=(a_{i,j})_{2n\times 2n}$ ($\boldsymbol A+\boldsymbol A^T=\boldsymbol O$), the pfaffian of A is given by:</p>
@@ -268,15 +268,17 @@
 <p>We can prove that $\text{pf}^2(\boldsymbol A)=\text{det}(\boldsymbol A)$:</p>
 <h4 id="Prove"><a href="#Prove" class="headerlink" title="Prove"></a>Prove</h4><p>At first, we prove that for an even-dimentional complex invertible antisymmetric matrix $\boldsymbol A_{2n\times 2n}$, there exist an invertible matrix $\boldsymbol P$ such that:</p>
 <script type="math/tex; mode=display">\boldsymbol A=\boldsymbol P^T\boldsymbol J\boldsymbol P</script><p>where $\boldsymbol J_{2n\times 2n}$ is given by:</p>
-<script type="math/tex; mode=display">\boldsymbol J=\text{diag}\left\lbrack\underbrace{\left(\begin{matrix}0&1\\-1&0\end{matrix}\right),\left(\begin{matrix}0&1\\-1&0\end{matrix}\right),\cdots,\left(\begin{matrix}0&1\\-1&0\end{matrix}\right)}_{n}\right\rbrack</script><p>and for non-even or singular-even $A_{d\times d}$ case, there also exists an invertible matrix $\boldsymbol P$ such that:</p>
-<script type="math/tex; mode=display">\boldsymbol A=\boldsymbol P^T\tilde{\boldsymbol J}P</script><p>where $\tilde{\boldsymbol J}$ takes the form of:</p>
+<script type="math/tex; mode=display">\boldsymbol J=\text{diag}\left\lbrack\underbrace{\left(\begin{matrix}0&1\\ -1&0\end{matrix}\right),\left(\begin{matrix}0&1\\-1&0\end{matrix}\right),\cdots,\left(\begin{matrix}0&1\\-1&0\end{matrix}\right)}_{n}\right\rbrack</script><p>and for non-even or singular-even $A_{d\times d}$ case, there also exists an invertible matrix $\boldsymbol P$ such that:</p>
+<script type="math/tex; mode=display">\boldsymbol A=\boldsymbol P^T\tilde{\boldsymbol J}\boldsymbol A)P</script><p>where $\tilde{\boldsymbol J}$ takes the form of:</p>
 <script type="math/tex; mode=display">\tilde{\boldsymbol J}=\left\lbrack\begin{matrix}\boldsymbol J_{2r\times 2r}&\boldsymbol O_{2r\times(d-2r)}\\ \boldsymbol O_{(d-2r)\times2r}&\boldsymbol O_{(d-2r)\times(d-2r)}\end{matrix}\right\rbrack</script><p>To prove this, assuming $\boldsymbol A_{d\times d}$ have the following form:</p>
 <script type="math/tex; mode=display">\boldsymbol A_{d\times d}=\left\lbrack\begin{matrix}a_{1,1}&a_{1,2}&a_{1,3}&\cdots&a_{1,d}\\ a_{2,1}&a_{2,2}&a_{2,3}&\cdots&a_{2,d}\\ a_{3,1}&a_{3,2}&\ddots&\cdots&\cdots\\ \vdots&\vdots&\vdots&\ddots& \\ a_{d,1}&a_{d,2}&\vdots&&\ddots \end{matrix}\right\rbrack=\left\lbrack\begin{matrix}\boldsymbol U_{2\times 2}&\boldsymbol W\\ \boldsymbol -W^T&\boldsymbol V_{(d-2)\times (d-2)}\end{matrix}\right\rbrack</script><p>Let $\boldsymbol Q$ be an elementary operation of row (of course invertible), thus $\boldsymbol Q^T$ will be a corresponding column operation. Simultanous apply $\boldsymbol Q$ and $\boldsymbol Q^T$ to an antisymmetric matrix would not break the property of antisymmetry.</p>
 <p>Since the rank of an antisymmetric would not be $1$, we could alway reorder the indices (the reorder operation can also be treated with form $\boldsymbol Q^T\boldsymbol A\boldsymbol Q$ where $\boldsymbol Q$ is invertible) such that $\text{rank}(\boldsymbol U)=2$ until $\boldsymbol A=\boldsymbol O$.</p>
 <p>Because $\text{rank}(\boldsymbol A)\geq\text{rank}(\boldsymbol V)$, so we can apply series of paired elementary operations such that :</p>
 <script type="math/tex; mode=display">(\boldsymbol Q\cdots)^T\boldsymbol A\boldsymbol (Q\cdots)=\left\lbrack\begin{matrix}\boldsymbol U'_{2\times 2}&\boldsymbol O_{2\times (d-2)}\\ \boldsymbol O_{(d-2)\times 2}&\boldsymbol V'_{(d-2)\times (d-2)}\end{matrix}\right\rbrack</script><p>and then scale $V’$ to $\left(\begin{matrix}0&amp;1\-1&amp;0\end{matrix}\right)$:</p>
 <script type="math/tex; mode=display">(\boldsymbol Q\cdots)^T\boldsymbol A\boldsymbol (Q\cdots)=\left\lbrack\begin{matrix}0&1&0&\cdots&0\\ -1&0&0&\cdots&0\\ 0&0&\ddots&\cdots&\cdots\\ \vdots&\vdots&\vdots&\ddots& \\ 0&0&\vdots&&\ddots \end{matrix}\right\rbrack</script><p>With this result, the original statement is proved recursively.</p>
-<p><img src="/images/Directional.svg" alt="Directing"></p>
+<p>Now we can write down that $\text{det}(\boldsymbol A)=\text{det}(\boldsymbol P^T\boldsymbol J\boldsymbol P)=\text{det}^2(\boldsymbol P)\text{det}(J)=\text{det}^2(\boldsymbol P)$.</p>
+<p>While term $a_{i,j}$ can be written as:</p>
+<script type="math/tex; mode=display">\begin{aligned}a_{i,j}&=\sum\limits_{k=1}^{2n}\sum\limits_{l=1}^{2n}(p^T)_{i,k}j_{k,l}p{l,j}=\sum\limits_{k=1}^{2n}\sum\limits_{l=1}^{2n}p_{k,i}j_{k,l}p{l,j}\\ &=\sum\limits_{k=1}^n\left(p_{2k-1,i}p_{2k,j}-p_{2k,i}p_{2k-1,j}\right)\end{aligned}</script><p><img src="/images/Directional.svg" alt="Directing"></p>
 
       
     </div>
@@ -327,7 +329,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-19 15:45:20" itemprop="dateModified" datetime="2023-07-19T15:45:20+00:00">2023-07-19</time>
+                <time title="Modified: 2023-07-19 16:10:10" itemprop="dateModified" datetime="2023-07-19T16:10:10+00:00">2023-07-19</time>
               </span>
 
           
