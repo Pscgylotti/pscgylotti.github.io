@@ -28,7 +28,7 @@
 <meta property="og:description" content="Intro to the problemDomino Tiling QuestionQuestion DescriptionAssuming we have a regular grid board of size $m\times n$ (provided that $2\mid mn$).  A perfect coverage is to completely covering the en">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-25T23:44:51.000Z">
-<meta property="article:modified_time" content="2023-07-19T10:33:28.159Z">
+<meta property="article:modified_time" content="2023-07-19T10:37:03.990Z">
 <meta property="article:author" content="Pscgylotti">
 <meta property="article:tag" content="Mathematics">
 <meta property="article:tag" content="Algorithm">
@@ -184,7 +184,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-19 10:33:28" itemprop="dateModified" datetime="2023-07-19T10:33:28+00:00">2023-07-19</time>
+                <time title="Modified: 2023-07-19 10:37:03" itemprop="dateModified" datetime="2023-07-19T10:37:03+00:00">2023-07-19</time>
               </span>
 
           
@@ -226,7 +226,7 @@
 </ul>
 <p>Assuming a simple extension that $(i,n+1)$ automatically transforms into $ (i+1,1)$.</p>
 <p>Apparently a legal collection of state strings $\lbrack r_1,r_2,\cdots,r_m\rbrack$ determines only one perfect coverage,<br>and a perfect coverage takes a fixed collection of state strings.</p>
-<p>The last row must takes all-ones state ($r_n=\cdots 11111111 \cdots$).</p>
+<p>The last row must takes all-ones state ($r_m=\cdots 11111111 \cdots$).</p>
 <p>To solve this, we first look into the state of two adjacent rows $r_i,r_{i+1}$:</p>
 <p>We say two state string $s_1,s_2$ is compatible, if and only if row $s_1|s_2=1$ (No double $0$ conflict) while $r_i=s_1$ and $r_{i+1}=s_2$ indeed be fully convered (it is not required to consider whether there is a vertical tile span to $i-1$-th row or $i+2$-th row, we can just take care of $r_i$ and $r_{i+1}$).</p>
 <p>All those compatible state string pairs can be calculated with a Deep First Search:</p>
@@ -245,13 +245,10 @@
 <p>The record of all compatible string pairs is marked as $CSP=\left\lbrace(s_1,s_2)_1,(s_1,s_2)_2,(s_1,s_2)_3,\cdots,(s_1,s_2)_p\right\rbrace$ where $p$ is the amount of all compatible string pairs satisfying $p=\mathcal O \left((\sqrt2+1)^n\right)$ too.</p>
 <p>Now setting $DP(i,r_i)$ representing the amount of different perfect coverages (till $i$-th row, that is to say the $1$-th to $i$-th rows are all fulfilled with no conflicts) when $i$-th row taking state string of $r_i$.</p>
 <p>We can initiate $DP(0,r_0)$ as:</p>
-<script type="math/tex; mode=display">DP(0,r_0)=\left\lbrace\begin{aligned}1,~\text{if}~r_0=\underbrace{\cdots 111111\cdots}_{\text{all is 1}}\\0,~\text{Otherwise.}\end{aligned}\right.$$ .
+<script type="math/tex; mode=display">DP(0,r_0)=\left\lbrace\begin{aligned}1,~\text{if}~r_0=\underbrace{\cdots 111111\cdots}_{\text{all is 1}}\\0,~\text{Otherwise.}\end{aligned}\right.</script><p>This is a compatible extension, as “0-th” row would not protrude to $1$-th row if and only if it takes all state 1. </p>
+<p>For any $i\in\lbrace 1,2,\cdots,n\rbrace$ , to calculate $DP(i,r_i)$ , a zero initialization is applied, then follows the calculation procedure:</p>
+<script type="math/tex; mode=display">\text{Iteration}~j~\text{From}~1~\text{to}~p:DP\left(i,\left(CSP_j\right)_{s_2}\right)+=DP\left(i-1,\left(CSP_j\right)_{s_1}\right)</script><p>Since $r_m$ must takes \underbrace{\cdots 111111\cdots}_{\text{all is 1}}, the result shall be $DP\left(m,\underbrace{\cdots 111111\cdots}_{\text{all is 1}}\right)$</p>
 
-This is a compatible extension, as "$0$-th" row would not protrude to $1$-th row if and only if it takes all state 1. 
-
-For any $i\in\lbrace 1,2,\cdots,n\rbrace$ , to calculate $DP(i,r_i)$ , a zero initialization is applied, then follows the calculation procedure:
-
-$$\text{Iteration}~j~\text{From}~1~\text{to}~p:DP\left(i,\left(CSP_j\right)_{s_2}\right)+=DP\left(i-1,\left(CSP_j\right)_{s_1}\right)</script>
     </div>
 
     
