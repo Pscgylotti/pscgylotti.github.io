@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://pscgylotti.github.io/images/Directional.svg">
 <meta property="article:published_time" content="2021-07-25T23:44:51.000Z">
-<meta property="article:modified_time" content="2023-07-19T11:52:08.096Z">
+<meta property="article:modified_time" content="2023-07-19T12:33:05.611Z">
 <meta property="article:author" content="Pscgylotti">
 <meta property="article:tag" content="Mathematics">
 <meta property="article:tag" content="Algorithm">
@@ -186,7 +186,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-19 11:52:08" itemprop="dateModified" datetime="2023-07-19T11:52:08+00:00">2023-07-19</time>
+                <time title="Modified: 2023-07-19 12:33:05" itemprop="dateModified" datetime="2023-07-19T12:33:05+00:00">2023-07-19</time>
               </span>
 
           
@@ -260,8 +260,14 @@
 <p>The graph constructed above is a BPG, since it can be drawn down as a planar figure, and also the black and white vertices are the two partitions.</p>
 <p>Thus if we put a tile on the board, it mean we choose a pair of black and white vertices, we make a <strong>match</strong>.</p>
 <p>The amount of perfect coverage automatically transforms into the amount of perfect match of a BPG.</p>
-<h3 id="Permanent"><a href="#Permanent" class="headerlink" title="Permanent"></a>Permanent</h3><p>If the two partitons ($V_1,V_2$) of a bipartite graph $G$ have equal vertices count ($|V_1|=|V_2|=\nu$), then we can write down a Bipartite Adjacent Matrix as:</p>
-<script type="math/tex; mode=display">BiA=\left(a_{i,j}\right)_{\nu\times\nu},a_{i,j}=\left\lbrace \begin{aligned}1&,~\text{if}~v_i~\text{in}~V_1~\text{is adjacent to}~v_j~\text{in}~V2;\\0&,~\text{Otherwise}\end{aligned}\right.</script><p><img src="/images/Directional.svg" alt="Directing"></p>
+<h3 id="Permanent"><a href="#Permanent" class="headerlink" title="Permanent"></a>Permanent</h3><p>If the two partitons ($V_1,V_2$) of a bipartite graph $G$ have equal vertices count ($|V_1|=|V_2|=\nu$), then we can write down a Bipartite Adjacency Matrix as:</p>
+<script type="math/tex; mode=display">\boldsymbol{BiA}=\left(a_{i,j}\right)_{\nu\times\nu},a_{i,j}=\left\lbrace \begin{aligned}1&,~\text{if}~v_i~\text{in}~V_1~\text{is adjacent to}~v_j~\text{in}~V2;\\0&,~\text{Otherwise}\end{aligned}\right.</script><p>We know that a determinat of a square matrix $\boldsymbol A=(a_{i,j})_{n\times n}$ is given by:</p>
+<script type="math/tex; mode=display">\text{det}(\boldsymbol A)=\sum\limits_{\sigma\in S_n}\prod\limits_{i=1}^n(-1)\text{sgn} (\sigma) a_{i,\sigma(i)}</script><p>where $S_{n}$ represents the full permutation of $\lbrace 1,2,\cdots,n\rbrace$ .</p>
+<p>However, if we remove the term of signature, we will get:</p>
+<script type="math/tex; mode=display">\text{perm}(\boldsymbol A)=\sum\limits_{\sigma\in S_n}\prod\limits_{i=1}^n(-1) a_{i,\sigma(i)}</script><p>This is the so-called <strong>Permanent</strong>. For a Bipartite Adjacency Matrix $\boldsymbol{BiA}$, the perfect match number is equal to its permanet $perm(\boldsymbol{BiA})$.</p>
+<p>This is trivial in fact since the permanent just try each case of the permutation brute-forcely, with a temporal complexity $\mathcal O(n!)$</p>
+<p>We can compute determinat with <strong>Gaussian Elimination</strong> in $\mathcal O(n^3)$, but it is hard to find an efficient algorithm for calculating permanent.</p>
+<h3 id="Pfaffian"><a href="#Pfaffian" class="headerlink" title="Pfaffian"></a>Pfaffian</h3><p><img src="/images/Directional.svg" alt="Directing"></p>
 
     </div>
 
@@ -343,7 +349,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro-to-the-problem"><span class="nav-number">1.</span> <span class="nav-text">Intro to the problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Domino-Tiling-Question"><span class="nav-number">1.1.</span> <span class="nav-text">Domino Tiling Question</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Question-Description"><span class="nav-number">1.1.1.</span> <span class="nav-text">Question Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Degenerate-Case"><span class="nav-number">1.1.2.</span> <span class="nav-text">Degenerate Case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamic-Programming"><span class="nav-number">1.1.3.</span> <span class="nav-text">Dynamic Programming</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bipartite-Planar-Graph"><span class="nav-number">1.2.</span> <span class="nav-text">Bipartite Planar Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Permanent"><span class="nav-number">1.3.</span> <span class="nav-text">Permanent</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intro-to-the-problem"><span class="nav-number">1.</span> <span class="nav-text">Intro to the problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Domino-Tiling-Question"><span class="nav-number">1.1.</span> <span class="nav-text">Domino Tiling Question</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Question-Description"><span class="nav-number">1.1.1.</span> <span class="nav-text">Question Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Degenerate-Case"><span class="nav-number">1.1.2.</span> <span class="nav-text">Degenerate Case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamic-Programming"><span class="nav-number">1.1.3.</span> <span class="nav-text">Dynamic Programming</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bipartite-Planar-Graph"><span class="nav-number">1.2.</span> <span class="nav-text">Bipartite Planar Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Permanent"><span class="nav-number">1.3.</span> <span class="nav-text">Permanent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pfaffian"><span class="nav-number">1.4.</span> <span class="nav-text">Pfaffian</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
