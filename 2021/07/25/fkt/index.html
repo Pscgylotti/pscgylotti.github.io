@@ -29,10 +29,12 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://pscgylotti.github.io/images/Directional.svg">
 <meta property="article:published_time" content="2021-07-25T23:44:51.000Z">
-<meta property="article:modified_time" content="2023-07-19T12:33:05.611Z">
+<meta property="article:modified_time" content="2023-07-19T13:16:12.585Z">
 <meta property="article:author" content="Pscgylotti">
 <meta property="article:tag" content="Mathematics">
 <meta property="article:tag" content="Algorithm">
+<meta property="article:tag" content="Graph Theory">
+<meta property="article:tag" content="Computer Science">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://pscgylotti.github.io/images/Directional.svg">
 
@@ -186,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-19 12:33:05" itemprop="dateModified" datetime="2023-07-19T12:33:05+00:00">2023-07-19</time>
+                <time title="Modified: 2023-07-19 13:16:12" itemprop="dateModified" datetime="2023-07-19T13:16:12+00:00">2023-07-19</time>
               </span>
 
           
@@ -267,7 +269,8 @@
 <script type="math/tex; mode=display">\text{perm}(\boldsymbol A)=\sum\limits_{\sigma\in S_n}\prod\limits_{i=1}^n(-1) a_{i,\sigma(i)}</script><p>This is the so-called <strong>Permanent</strong>. For a Bipartite Adjacency Matrix $\boldsymbol{BiA}$, the perfect match number is equal to its permanet $perm(\boldsymbol{BiA})$.</p>
 <p>This is trivial in fact since the permanent just try each case of the permutation brute-forcely, with a temporal complexity $\mathcal O(n!)$</p>
 <p>We can compute determinat with <strong>Gaussian Elimination</strong> in $\mathcal O(n^3)$, but it is hard to find an efficient algorithm for calculating permanent.</p>
-<h3 id="Pfaffian"><a href="#Pfaffian" class="headerlink" title="Pfaffian"></a>Pfaffian</h3><p><img src="/images/Directional.svg" alt="Directing"></p>
+<h3 id="Pfaffian"><a href="#Pfaffian" class="headerlink" title="Pfaffian"></a>Pfaffian</h3><p>Now we abandon the bipartite adjacency matrix and return to the normal adjacency matrix, </p>
+<script type="math/tex; mode=display">\text{PerfectMatch}(G)=\frac{1}{2^nn!}\sum\limits_{\sigma\in S_{2n}}\prod\limits_{i=1}^na_{\sigma(2i-1),\sigma(2i)}</script><p><img src="/images/Directional.svg" alt="Directing"></p>
 
     </div>
 
@@ -279,6 +282,8 @@
           <div class="post-tags">
               <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
               <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+              <a href="/tags/Graph-Theory/" rel="tag"># Graph Theory</a>
+              <a href="/tags/Computer-Science/" rel="tag"># Computer Science</a>
           </div>
 
         
@@ -368,7 +373,7 @@
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
