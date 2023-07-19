@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://pscgylotti.github.io/images/Directional.svg">
 <meta property="article:published_time" content="2021-07-25T23:44:51.000Z">
-<meta property="article:modified_time" content="2023-07-19T14:55:33.470Z">
+<meta property="article:modified_time" content="2023-07-19T15:00:58.071Z">
 <meta property="article:author" content="Pscgylotti">
 <meta property="article:tag" content="Mathematics">
 <meta property="article:tag" content="Algorithm">
@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-19 14:55:33" itemprop="dateModified" datetime="2023-07-19T14:55:33+00:00">2023-07-19</time>
+                <time title="Modified: 2023-07-19 15:00:58" itemprop="dateModified" datetime="2023-07-19T15:00:58+00:00">2023-07-19</time>
               </span>
 
           
@@ -277,9 +277,10 @@
 <script type="math/tex; mode=display">\text{pf}(\boldsymbol A)=\frac{1}{2^nn!}\sum\limits_{\sigma\in S_{2n}}\text{sgn}(\sigma)\prod\limits_{i=1}^na_{\sigma(2i-1),\sigma(2i)}</script><p>This looks a bit familiar, it differs from perfect match amount only by a signature factor on each additive term.</p>
 <p>We can prove that $\text{pf}^2(\boldsymbol A)=\text{det}(\boldsymbol A)$:</p>
 <h4 id="Prove"><a href="#Prove" class="headerlink" title="Prove"></a>Prove</h4><p>At first, we prove that for an even-dimentional complex invertible antisymmetric matrix $\boldsymbol A_{2n\times 2n}$, there exist an invertible matrix $\boldsymbol P$ such that:</p>
-<script type="math/tex; mode=display">\boldsymbol  A=\boldsymbol P^T\boldsymbol J\boldsymbol P</script><p>where $\boldsymbol J_{2n\times 2n}$ is given by:</p>
-<script type="math/tex; mode=display">\boldsymbol J=\text{diag}\left\lbrack\underbrace{\left(\begin{matrix}0&1\\-1&0\end{matrix}\right),\left(\begin{matrix}0&1\\-1&0\end{matrix}\right),\cdots,\left(\begin{matrix}0&1\\-1&0\end{matrix}\right)}_{n}\right\rbrack</script><p>and for non-even or singular even $A$ case, also exists an invertible matrix $\boldsymbol P$ such that:</p>
-<p><img src="/images/Directional.svg" alt="Directing"></p>
+<script type="math/tex; mode=display">\boldsymbol A=\boldsymbol P^T\boldsymbol J\boldsymbol P</script><p>where $\boldsymbol J_{2n\times 2n}$ is given by:</p>
+<script type="math/tex; mode=display">\boldsymbol J=\text{diag}\left\lbrack\underbrace{\left(\begin{matrix}0&1\\-1&0\end{matrix}\right),\left(\begin{matrix}0&1\\-1&0\end{matrix}\right),\cdots,\left(\begin{matrix}0&1\\-1&0\end{matrix}\right)}_{n}\right\rbrack</script><p>and for non-even or singular-even $A_{d\times d}$ case, also exists an invertible matrix $\boldsymbol P$ such that:</p>
+<script type="math/tex; mode=display">\boldsymbol A=\boldsymbol P^T\tilde{\boldsymbol J}P</script><p>where $\tilde{\boldsymbol J}$ takes the form of:</p>
+<script type="math/tex; mode=display">\tilde{\boldsymbol J}=\left\lbrack\begin{matrix}\boldsymbol J_{2r\times 2r}&\boldsymbol O_{2r\times(d-2r)}\\ \boldsymbol O_{(d-2r)\times2r}&\boldsymbol O_{(d-2r)\times(d-2r)}\end{matrix}\right\rbrack</script><p><img src="/images/Directional.svg" alt="Directing"></p>
 
     </div>
 
