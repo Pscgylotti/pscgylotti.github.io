@@ -178,7 +178,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-19 11:48:18" itemprop="dateModified" datetime="2023-07-19T11:48:18+00:00">2023-07-19</time>
+                <time title="Modified: 2023-07-19 11:52:08" itemprop="dateModified" datetime="2023-07-19T11:52:08+00:00">2023-07-19</time>
               </span>
 
           
@@ -242,7 +242,7 @@
 <script type="math/tex; mode=display">CSP=\left\lbrace(s_1,s_2)_1,(s_1,s_2)_2,(s_1,s_2)_3,\cdots,(s_1,s_2)_p\right\rbrace</script><p>where $p$ is the amount of all compatible string pairs satisfying $p=\mathcal O \left((\sqrt2+1)^n\right)$ too.</p>
 <p>Now setting $DP(i,r_i)$ representing the amount of different perfect coverages (till $i$-th row, that is to say the $1$-th to $i$-th rows are all fulfilled without conflicts) when $i$-th row taking state string of $r_i$.</p>
 <p>We can initiate $DP(0,r_0)$ as:</p>
-<script type="math/tex; mode=display">DP(0,r_0)=\left\lbrace\begin{aligned}1,~\text{if}~r_0=\underbrace{\cdots 111111\cdots}_{\text{all is 1}}\\0,~\text{Otherwise.}\end{aligned}\right.</script><p>This is a compatible extension, as “0-th” row would not protrude to $1$-th row if and only if it takes all state 1. </p>
+<script type="math/tex; mode=display">DP(0,r_0)=\left\lbrace\begin{aligned}1&,~\text{if}~r_0=\underbrace{\cdots 111111\cdots}_{\text{all is 1}};\\0&,~\text{Otherwise.}\end{aligned}\right.</script><p>This is a compatible extension, as “0-th” row would not protrude to $1$-th row if and only if it takes all state 1. </p>
 <p>For any $i\in\lbrace 1,2,\cdots,n\rbrace$ , to calculate $DP(i,r_i)$ , a zero initialization is applied, then follows the calculation procedure:</p>
 <script type="math/tex; mode=display">\text{Iterating}~i~\text{From}~1~\text{to}~m:</script><script type="math/tex; mode=display">\text{Iterating}~j~\text{From}~1~\text{to}~p:DP\left(i,\left(CSP_j\right)_{s_2}\right)+=DP\left(i-1,\left(CSP_j\right)_{s_1}\right)</script><p>Since $r_m$ must takes $\underbrace{\cdots 111111\cdots}_{\text{all is 1}}$, the result shall be $DP\left(m,\underbrace{\cdots 111111\cdots}_{\text{all is 1}}\right)$</p>
 <p>Clearly the proposed Dynamic Programming method has a temporal complexity of $\mathcal O\left(\text{max}\lbrace m,n\rbrace(\sqrt2+1)^{\text{min}\lbrace m,n\rbrace}\right)$, which is non-polynomial.</p>
@@ -253,7 +253,7 @@
 <p>Thus if we put a tile on the board, it mean we choose a pair of black and white vertices, we make a <strong>match</strong>.</p>
 <p>The amount of perfect coverage automatically transforms into the amount of perfect match of a BPG.</p>
 <h3 id="Permanent"><a href="#Permanent" class="headerlink" title="Permanent"></a>Permanent</h3><p>If the two partitons ($V_1,V_2$) of a bipartite graph $G$ have equal vertices count ($|V_1|=|V_2|=\nu$), then we can write down a Bipartite Adjacent Matrix as:</p>
-<script type="math/tex; mode=display">BiA=\left(a_{i,j}\right)_{\nu\times\nu},a_{i,j}=\left\lbrace \begin{aligned}1,~\text{if}~v_i~\text{in}~V_1~\text{is adjacent to}~v_j~\text{in}~V2\\0,~\text{Otherwise}\end{aligned}\right.</script><p><img src="/images/Directional.svg" alt="Directing"></p>
+<script type="math/tex; mode=display">BiA=\left(a_{i,j}\right)_{\nu\times\nu},a_{i,j}=\left\lbrace \begin{aligned}1&,~\text{if}~v_i~\text{in}~V_1~\text{is adjacent to}~v_j~\text{in}~V2;\\0&,~\text{Otherwise}\end{aligned}\right.</script><p><img src="/images/Directional.svg" alt="Directing"></p>
 
       
     </div>
@@ -304,7 +304,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-19 11:48:18" itemprop="dateModified" datetime="2023-07-19T11:48:18+00:00">2023-07-19</time>
+                <time title="Modified: 2023-07-19 11:52:08" itemprop="dateModified" datetime="2023-07-19T11:52:08+00:00">2023-07-19</time>
               </span>
 
           
