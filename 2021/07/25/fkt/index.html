@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://pscgylotti.github.io/images/Directional.svg">
 <meta property="article:published_time" content="2021-07-25T23:44:51.000Z">
-<meta property="article:modified_time" content="2023-07-20T15:56:27.950Z">
+<meta property="article:modified_time" content="2023-07-20T16:01:00.599Z">
 <meta property="article:author" content="Pscgylotti">
 <meta property="article:tag" content="Mathematics">
 <meta property="article:tag" content="Algorithm">
@@ -188,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-20 15:56:27" itemprop="dateModified" datetime="2023-07-20T15:56:27+00:00">2023-07-20</time>
+                <time title="Modified: 2023-07-20 16:01:00" itemprop="dateModified" datetime="2023-07-20T16:01:00+00:00">2023-07-20</time>
               </span>
 
           
@@ -265,9 +265,9 @@
 <p>The amount of perfect coverage automatically transforms into the amount of perfect match of a BPG.</p>
 <h3 id="Permanent"><a href="#Permanent" class="headerlink" title="Permanent"></a>Permanent</h3><p>If the two partitons ($V_1,V_2$) of a bipartite graph $G$ have equal vertices count ($|V_1|=|V_2|=\nu$), then we can write down a Bipartite Adjacency Matrix as:</p>
 <script type="math/tex; mode=display">\boldsymbol{BiA}=\left(a_{i,j}\right)_{\nu\times\nu},a_{i,j}=\left\lbrace \begin{aligned}1&,~\text{if}~v_i~\text{in}~V_1~\text{is adjacent to}~v_j~\text{in}~V2;\\0&,~\text{Otherwise}\end{aligned}\right.</script><p>We know that a determinat of a square matrix $\boldsymbol A=(a_{i,j})_{n\times n}$ is given by:</p>
-<script type="math/tex; mode=display">\text{det}(\boldsymbol A)=\sum\limits_{\sigma\in S_n}\prod\limits_{i=1}^n(-1)\text{sgn} (\sigma) a_{i,\sigma(i)}</script><p>where $S_{n}$ represents the full permutation of $\lbrace 1,2,\cdots,n\rbrace$ .</p>
+<script type="math/tex; mode=display">\text{det}(\boldsymbol A)=\sum\limits_{\sigma\in S_n}\prod\limits_{i=1}^n\text{sgn} (\sigma) a_{i,\sigma(i)}</script><p>where $S_{n}$ represents the full permutation of $\lbrace 1,2,\cdots,n\rbrace$ .</p>
 <p>However, if we remove the term of signature, we will get:</p>
-<script type="math/tex; mode=display">\text{perm}(\boldsymbol A)=\sum\limits_{\sigma\in S_n}\prod\limits_{i=1}^n(-1) a_{i,\sigma(i)}</script><p>This is the so-called <strong>Permanent</strong>. For a Bipartite Adjacency Matrix $\boldsymbol{BiA}$, the perfect match number is equal to its permanet $perm(\boldsymbol{BiA})$.</p>
+<script type="math/tex; mode=display">\text{perm}(\boldsymbol A)=\sum\limits_{\sigma\in S_n}\prod\limits_{i=1}^n a_{i,\sigma(i)}</script><p>This is the so-called <strong>Permanent</strong>. For a Bipartite Adjacency Matrix $\boldsymbol{BiA}$, the perfect match number is equal to its permanet $perm(\boldsymbol{BiA})$.</p>
 <p>This is trivial in fact since the permanent just try each case of the permutation brute-forcely, with a temporal complexity $\mathcal O(n!)$</p>
 <p>We can compute determinat with <strong>Gaussian Elimination</strong> in $\mathcal O(n^3)$, but it is hard to find an efficient algorithm for calculating permanent.</p>
 <h3 id="Pfaffian"><a href="#Pfaffian" class="headerlink" title="Pfaffian"></a>Pfaffian</h3><p>Now we abandon the bipartite adjacency matrix and return to the normal adjacency matrix $\boldsymbol A$. The perfect match amount for a $n,n$-bipartite graph is given by:</p>
