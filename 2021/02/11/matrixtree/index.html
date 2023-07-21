@@ -28,7 +28,7 @@
 <meta property="og:description" content="Counting of Spanning TreeKirchhoff MatrixSelect a labeling map $\mu:\lbrace 1,2,\cdots,\nu(G)\rbrace\to V(G)$ which is an one-to-one map mapping an index to a vertex in graph $G$, define the Kirchhoff">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-11T19:25:12.000Z">
-<meta property="article:modified_time" content="2023-07-21T12:24:53.662Z">
+<meta property="article:modified_time" content="2023-07-21T13:23:16.456Z">
 <meta property="article:author" content="Pscgylotti">
 <meta property="article:tag" content="Mathematics">
 <meta property="article:tag" content="Graph Theory">
@@ -184,7 +184,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-21 12:24:53" itemprop="dateModified" datetime="2023-07-21T12:24:53+00:00">2023-07-21</time>
+                <time title="Modified: 2023-07-21 13:23:16" itemprop="dateModified" datetime="2023-07-21T13:23:16+00:00">2023-07-21</time>
               </span>
 
           
@@ -201,7 +201,7 @@
         <h2 id="Counting-of-Spanning-Tree"><a href="#Counting-of-Spanning-Tree" class="headerlink" title="Counting of Spanning Tree"></a>Counting of Spanning Tree</h2><h3 id="Kirchhoff-Matrix"><a href="#Kirchhoff-Matrix" class="headerlink" title="Kirchhoff Matrix"></a>Kirchhoff Matrix</h3><p>Select a labeling map $\mu:\lbrace 1,2,\cdots,\nu(G)\rbrace\to V(G)$ which is an one-to-one map mapping an index to a vertex in graph $G$, define the <strong>Kirchhoff Matrix</strong> of $G$ as:</p>
 <script type="math/tex; mode=display">K(G,\mu)=(a_{i,j})_{n\times n},a_{i,j}=\left\lbrace \begin{aligned}\text{deg}(\mu(i)),&i=j\\ -\text{cnt}(\mu(i),\mu(j)),&i\neq j\end{aligned}\right.</script><p>where $\text{cnt}(\mu(i),\mu(j))$ represent the amount of edges connecting vertex $m$ and $n$ (if $G$ is a simple graph, $cnt(m,n)\in\lbrace0,1\rbrace$).<br>We abbreviate $K(G,\mu)$ as $K(G)$ or $K$ if $G$ and $\mu$ is already clarified.</p>
 <h4 id="Property-I"><a href="#Property-I" class="headerlink" title="Property I"></a>Property I</h4><p>Since the sum of every row and column of $K(G)$ equals $0$, so $\text{det}(K(G))=0$ .</p>
-<h4 id="Property-II"><a href="#Property-II" class="headerlink" title="Property II"></a>Property II</h4><p>If $\omega(G)&gt;1$, then the determinant of every principal sub-matrix of $K(G)$ equals $0$, where $\omega(G)$ denotes the amount of connected branches of $G$.</p>
+<h4 id="Property-II"><a href="#Property-II" class="headerlink" title="Property II"></a>Property II</h4><p>If $\omega(G)&gt;1$, then the determinant of every principal sub-matrix of $K(G)$ with order $n-1$ equals $0$, where $\omega(G)$ denotes the amount of connected branches of $G$.</p>
 <p><strong><em>Prove</em></strong>:</p>
 <p>Since $G$ can be divided into $\omega(G)$ connected branches, we can select a labling map $\mu$ such that</p>
 <script type="math/tex; mode=display">K(G)=\text{diag}\left(K_1,K_2,\cdots,K_{\omega(G)}\right)</script><p>where $K_i$ represents the Kirchhoff matrix of the $i$-th connected branch of $G$, whose determinant is of course zero.<br>We using $C_r(K)$ denoting the sub-matrix gained through removing the $r$-th row and $r$-th column of $K$.<br>Assuming the vertex $\mu(r)$ we removed is the $j$-th vertex of the $s$-th connected branch, we have:</p>
@@ -210,9 +210,25 @@
 <p><strong><em>Prove</em></strong>:</p>
 <p>Set the removed vertex $\mu(r)$ as a root, and sort the other vertices by the depth (the distance to root) from mint to max (the order between two vertice having same depth can be treated arbitrarily), we gain:</p>
 <script type="math/tex; mode=display">\mu(a_1),\mu(a_2),\cdots,\mu(a_{\nu-1})</script><p>Meanwhile, applying this sorted order to labeling map as $\mu’(i)=\mu(a_i)$, and gain:</p>
-<script type="math/tex; mode=display">K'(G\slash\lbrace{\mu(r)},\mu')=(k'_{i,j})_{\nu-1\times\nu-1}</script><p>Assuming vertex $\mu’(s)$ has $m$ children, denoted as $\mu’(b_1),\mu’(b_2),\cdots,\mu’(b_m)$ , define an operation as adding $b_1$-th column,$b_2$-th column,…,$b_m$-th column to $b_s$-th column in $K’$. We perform this operation by the order of depth max to min (namely from the right of matrix to the left).</p>
-<p>We say an $i$-th column is fine if and only if $k’_{i,i}=1$ and $\forall j\in\lbrace i+1,i+2,\cdots,\nu-1\rbrace,k’_{j,i}=0$.<br>For a leaf vertex $\mu’(l)$, since it is in the maximum depth, and it just has its only parent as neighbours, so $k’_{l,l}=1$ and there is no non-zero entries below $k’_{l,l}$</p>
-
+<script type="math/tex; mode=display">K'(G\backslash\lbrace\mu(r)\rbrace,\mu')=(k'_{i,j})_{\nu-1\times\nu-1}</script><p>Assuming vertex $\mu’(s)$ has $m$ children, denoted as $\mu’(b_1),\mu’(b_2),\cdots,\mu’(b_m)$ , define an operation as adding $b_1$-th column,$b_2$-th column,…,$b_m$-th column to $b_s$-th column in $K’$. We perform this operation by the order of depth max to min (namely from the right of matrix to the left).</p>
+<p>We say an $i$-th column is fine if and only if $k’_{i,i}=1$ and $\forall j\in\lbrace i+1,i+2,\cdots,\nu-1\rbrace,k’_{j,i}=0$. </p>
+<p>For a leaf vertex $\mu’(l)$, since it is in the maximum depth, and it just has its only parent as neighbours, so $k’_{l,l}=1$ and there is no non-zero entries below $k’_{l,l}$. $\mu’(l)$ is already fine.</p>
+<p>Applying the proposed operation will cause $s$-column reaches fine if all its child is fine (the fine $b_i$-th column will have a $+1$ at $k’_{b_i,b_i}$ to diminish the $-1$ at $k’_{b_i,s}$, while decreaing $k’_{s,s}$ by $1$ through $b_{s,b_i}$)</p>
+<p>So, recursively, after all the operation, every column reaches fine and the matrix transform into a upper-triangular matrix whose diagonal is all ones. Noting that the operation is elementary, so determinant is kept unchanges, which implies:</p>
+<script type="math/tex; mode=display">\text{det}\left(C_r\left(K(G)\right)\right)=\text{det}(K')=1</script><h3 id="Incidence-Matrix"><a href="#Incidence-Matrix" class="headerlink" title="Incidence Matrix:"></a>Incidence Matrix:</h3><p>Selecting both a labeling map $\mu:\lbrace1,2,\cdots,\nu(G)\rbrace$ for vertices and a labeling map $\mu:\lbrace1,2,\cdots,m(G)\rbrace$ for edges. The <strong>incidence matrix</strong> $B(G,\mu,\theta)=(b_{i,j})_{\nu(G)\times m(G)}$ of graph $G$ is defined by: If $\exists\theta(j)$ connects $\mu(p),\mu(q)$, then $\lbrace b_{p,j},b_{q,j}\rbrace=\lbrace -1,1\rbrace$ (which one is $1$ and which one is $-1$ is not important), the other entries are all $0$.<br>It can be easily seen that $K(G)=B(G)B(G)^T$ by the definition.</p>
+<h3 id="Matrix-Tree-Theorem"><a href="#Matrix-Tree-Theorem" class="headerlink" title="Matrix-Tree Theorem"></a>Matrix-Tree Theorem</h3><script type="math/tex; mode=display">\forall i\in\lbrace 1,2,\cdots,\nu(G)\rbrace,\text{det}\left(C_i(K(G))\right)=\tau(G)</script><p>namely the determinant of an arbitrary $n-1$ order principal sub-matrix of $K(G)$ equals the amount of all spanning trees of $G$.</p>
+<p><strong><em>Prove</em></strong>:</p>
+<p>Denoting $B_r$ as the matrix gained by getting rid of the $r$-th row of $B(G). Obviously $C_r(K)=B_rB_r^T$<br>With Cauchy-Binet Formula:</p>
+<script type="math/tex; mode=display">\begin{aligned}\text{det}(C_r(K))=\text{det}(B_rB_r^T)\\ \left\lbrace\begin{aligned}0,&\nu(G)-1>m(G)\\ \sum\limits_{1\leq i_1<i_2<\cdots<i_{\nu-1}\leq m}\text{det}\left(B_r\left(\begin{matrix}1&2&\cdots&\nu-1\\ i_1&i_2&\cdots&i_{\nu}\end{matrix}\right)\right)^2,&\nu(G)-1>m(G)\end{aligned}\right.\end{aligned}=e</script><p>Let </p>
+<script type="math/tex; mode=display">x=(x_1,x_2,x_3,\cdots,x_{\nu-1}),1\leq x_1<x_2<\cdots<x_{\nu-1}\leq m</script><p>and make a abbreviated notion:</p>
+<script type="math/tex; mode=display">B_r^x=B_r\left(\begin{matrix}1&2&\cdots&\nu-1\\ i_1&i_2&\cdots&i_{\nu}\end{matrix}\right)</script><p>We have:</p>
+<script type="math/tex; mode=display">\text{det}(B_r^x)^2=\text{det}(B_r^x)\text{det}((B_r^x)^T)=det(B_r^x(B_r^x)^T)</script><p>In fact $B_r^x(B_r^x)^T$ is a $\nu-1$ order principal sub-matrix of a $\nu$ order Kirchhoff matrix, we have $B_r^x(B_r^x)^T=1$ if adding $\theta(x_1),\theta(x_2),\cdots,\theta(x_{\nu-1})$ to the empty graph of $V(G)$ is a tree, or else $B_r^x(B_r^x)^T=1$ (since there are $\nu-1$ edges which is the minimal requirement for a completely connected graph).<br>So if we compute the $\text{det}(C_r(K))$, it will automatically traverse any possible sub graph of $G$ with $\nu-1$ edge and self-add $1$ if it find a tree. Thus</p>
+<script type="math/tex; mode=display">\text{det}\left(C_r(K(G))\right)=\tau(G)</script><h3 id="An-Example"><a href="#An-Example" class="headerlink" title="An Example"></a>An Example</h3><p>Define a <strong>Wheel Graph</strong> as $W_n=C_n\lor v_o$ where $v_o$ is a single vertex and $C_n$ is a $n$-cycle, please calculate the $\tau(W_n)$:</p>
+<p>Set $\mu$ as mapping vertices on $C_n$ to $\lbrace 1,2,\cdots,n\rbrace$ and $v_o$ to $n+1$. We have the $K(W_n)$ as:</p>
+<script type="math/tex; mode=display">K(W_n)=\left(\begin{matrix}3&-1&0&\cdots&0&-1&-1\\ -1&3&-1&0&\cdots&0&-1\\ 0&-1&3&\ddots&\ddots&\vdots&\vdots\\ \vdots&0&\ddots&\ddots&\ddots&0&\vdots\\ 0&\vdots&\ddots&\ddots&3&-1&\vdots\\ -1&0&\cdots&0&-1&3&-1\\ -1&-1&\cdots&\cdots&\cdots&-1&n\end{matrix}\right)_{n+1\times n+1}</script><p>Get rid of the $n+1$-th row and column, we have:</p>
+<script type="math/tex; mode=display">\tau(W_n)=\left|\begin{matrix}3&-1&0&\cdots&0&-1\\ -1&3&-1&0&\cdots&0\\0&-1&3&\ddots&\ddots&\vdots\\ \vdots&0&\ddots&\ddots&\ddots&0\\ 0&\vdots&\ddots&\ddots&3&-1\\ -1&0&\cdots&0&-1&3\end{matrix}\right|_{n\times n}=\left(\dfrac{3+\sqrt{5}}{2}\right)^n+\left(\dfrac{3-\sqrt{5}}{2}\right)^n-2</script><p>The trick here is setting the target term as $S_n$, Let $P_n$ be</p>
+<script type="math/tex; mode=display">P_n=\left|\begin{matrix}3&-1&0&\cdots&0\\ -1&3&\ddots&\ddots&\vdots\\ 0&\ddots&\ddots&\ddots&0\\ \vdots&\ddots&\ddots&3&-1\\ 0&\cdots&0&-1&3\end{matrix}\right|_{n\times n}</script><p>Expand $S_n$ and $P_n$, we have:</p>
+<script type="math/tex; mode=display">S_n=2P_{n-1}-2P_{n-2}-2,P_n=3P_{n-1}-P_{n-2}</script>
     </div>
 
     
@@ -296,7 +312,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Counting-of-Spanning-Tree"><span class="nav-number">1.</span> <span class="nav-text">Counting of Spanning Tree</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kirchhoff-Matrix"><span class="nav-number">1.1.</span> <span class="nav-text">Kirchhoff Matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Property-I"><span class="nav-number">1.1.1.</span> <span class="nav-text">Property I</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Property-II"><span class="nav-number">1.1.2.</span> <span class="nav-text">Property II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Property-III"><span class="nav-number">1.1.3.</span> <span class="nav-text">Property III</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Counting-of-Spanning-Tree"><span class="nav-number">1.</span> <span class="nav-text">Counting of Spanning Tree</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kirchhoff-Matrix"><span class="nav-number">1.1.</span> <span class="nav-text">Kirchhoff Matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Property-I"><span class="nav-number">1.1.1.</span> <span class="nav-text">Property I</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Property-II"><span class="nav-number">1.1.2.</span> <span class="nav-text">Property II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Property-III"><span class="nav-number">1.1.3.</span> <span class="nav-text">Property III</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Incidence-Matrix"><span class="nav-number">1.2.</span> <span class="nav-text">Incidence Matrix:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Matrix-Tree-Theorem"><span class="nav-number">1.3.</span> <span class="nav-text">Matrix-Tree Theorem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#An-Example"><span class="nav-number">1.4.</span> <span class="nav-text">An Example</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
