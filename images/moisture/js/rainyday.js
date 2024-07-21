@@ -13,7 +13,7 @@ function RainyDay(a, b) {
         crop: [0, 0, this.img.naturalWidth, this.img.naturalHeight],
         enableSizeChange: !0,
         parentElement: document.getElementsByTagName("body")[0],
-        fps: 30,
+        fps: 60,
         fillStyle: "#8ED6FF",
         enableCollisions: !0,
         gravityThreshold: 5,
