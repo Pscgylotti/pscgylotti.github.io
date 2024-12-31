@@ -101,4 +101,4 @@ $$P_n=\left|\begin{matrix}3&-1&0&\cdots&0\\ -1&3&\ddots&\ddots&\vdots\\ 0&\ddots
 
 Expand $S_n$ and $P_n$, we have:
 
-$$S_n=2P_{n-1}-2P_{n-2}-2,P_n=3P_{n-1}-P_{n-2}$$
+$$S_n=2P_{n-1}-2P_{n-2}-2,P_n=3P_{n-1}-P_{n-2}$$ 
