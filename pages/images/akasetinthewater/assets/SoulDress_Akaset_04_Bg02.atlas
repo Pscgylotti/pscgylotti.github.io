@@ -1,0 +1,97 @@
+
+SoulDress_Akaset_04_Bg02.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+beijing1
+  rotate: false
+  xy: 2, 1015
+  size: 1825, 900
+  orig: 1825, 900
+  offset: 0, 0
+  index: -1
+hua1
+  rotate: false
+  xy: 2, 324
+  size: 529, 264
+  orig: 529, 264
+  offset: 0, 0
+  index: -1
+hua10
+  rotate: false
+  xy: 1234, 643
+  size: 577, 370
+  orig: 577, 370
+  offset: 0, 0
+  index: -1
+hua2
+  rotate: true
+  xy: 1480, 109
+  size: 171, 127
+  orig: 171, 127
+  offset: 0, 0
+  index: -1
+hua3
+  rotate: false
+  xy: 1075, 22
+  size: 403, 258
+  orig: 403, 258
+  offset: 0, 0
+  index: -1
+hua4
+  rotate: true
+  xy: 1626, 148
+  size: 493, 279
+  orig: 493, 279
+  offset: 0, 0
+  index: -1
+hua5
+  rotate: false
+  xy: 691, 72
+  size: 363, 206
+  orig: 363, 206
+  offset: 0, 0
+  index: -1
+hua6
+  rotate: false
+  xy: 365, 2
+  size: 324, 276
+  orig: 324, 276
+  offset: 0, 0
+  index: -1
+hua7
+  rotate: false
+  xy: 1075, 282
+  size: 549, 359
+  orig: 549, 360
+  offset: 0, 1
+  index: -1
+hua8
+  rotate: false
+  xy: 568, 686
+  size: 664, 327
+  orig: 664, 328
+  offset: 0, 1
+  index: -1
+hua9
+  rotate: false
+  xy: 568, 280
+  size: 505, 404
+  orig: 505, 404
+  offset: 0, 0
+  index: -1
+shanhu
+  rotate: false
+  xy: 2, 590
+  size: 564, 423
+  orig: 567, 427
+  offset: 3, 0
+  index: -1
+shanhu4
+  rotate: false
+  xy: 2, 31
+  size: 361, 291
+  orig: 362, 291
+  offset: 1, 0
+  index: -1

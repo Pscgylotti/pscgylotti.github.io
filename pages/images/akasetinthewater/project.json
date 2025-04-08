@@ -1,0 +1,1170 @@
+{
+	"contentrating" : "Questionable",
+	"description" : "Original: Soul Tide CG (Akaset Uniform Homeland Background)\nDefault Setting is optimized for resolution 16:9, other resolution ratio may cause background unaligned, you can adjust it in Settings with component (Jellyfish, Plant) position (top/left shift) and size setting\nClick into Touch Box Area will trigger different spine animation for akaset, you can customized the box position and size in Settings, Turn on border display will show the border of touch box so that you can adjust it with your eyes\nThere are two style of Clock: Futuristic (Recommand), Astronomical (Prototype: Prague Astronomical Clock)\nYou can toggle the water ripples effect on or off in Settings, turn off may save performance\nFuturistic Panel will display the battery, the date and also audio frequency effect, you can click the kernel to choose a music file for playing\nExperimental Live2D Model can be turned on in Settings\n2023/3/8 : Add Music List Player",
+	"file" : "index.html",
+	"general" : 
+	{
+		"localization" : 
+		{
+			"en-us" : 
+			{
+				"ui_Hagakureruri2" : "Hagakure Ruri Bikini",
+				"ui_akaset1" : "Akaset Classic",
+				"ui_akaset2" : "Akaset Meow",
+				"ui_akaset3" : "Akaset Device",
+				"ui_akaset4" : "Akaset Bikini",
+				"ui_akasetleftshift" : "Akaset Left Shift",
+				"ui_akasetsize" : "Akaset Size",
+				"ui_akasettopshift" : "Akaset Top Shift",
+				"ui_alisa1" : "Alisa Classic",
+				"ui_alisa2" : "Alisa Maid",
+				"ui_amaneinori1" : "Amane Inori Classic",
+				"ui_amaneinori2" : "Amane Inori School",
+				"ui_animationspeed" : "Spine Animation Speed",
+				"ui_astronomical" : "Astronomical",
+				"ui_autoripples" : "Auto Ripples",
+				"ui_backgroundcolor" : "The Background Color Under everything(A Linear Gradient)",
+				"ui_blinkfix" : "Blink Fix(If the girl doesn't blink check on this and reload)",
+				"ui_bubblespeed" : "Bubble Speed",
+				"ui_clock" : "Clock",
+				"ui_clockleft" : "Clock Left",
+				"ui_clocksize" : "Clock Size",
+				"ui_clocktop" : "Clock Top",
+				"ui_colcher1" : "Colcher Classic",
+				"ui_colcher2" : "Colcher Canonical",
+				"ui_control1x" : "Beizer Control 1 X",
+				"ui_control1y" : "Beizer Control 1 Y",
+				"ui_control2x" : "Beizer Control 2 X",
+				"ui_control2y" : "Beizer Control 2 Y",
+				"ui_enablebubble" : "Enable Bubble Effect (Requires Reload)",
+				"ui_enablefisheffect" : "Enable Fish Effect (Requires Reload)",
+				"ui_enablefuturisticpanel" : "Enable Futuristic Panel",
+				"ui_enablehalo" : "Enable Halo Effect",
+				"ui_enablelive2d" : "Enable Live2D (Experimental)(Requires Reload)",
+				"ui_enableray" : "Enable Ray Effect(Requires Reload)",
+				"ui_enableterminal" : "Enable Terminal(Debug)",
+				"ui_enabletouchboxmood" : "Enable Touch Box(Emotion Anim)",
+				"ui_enabletouchboxshy1" : "Enable Touch Box(Shy Anim 1)",
+				"ui_enabletouchboxshy2" : "Enable Touch Box(Shy Anim 2)",
+				"ui_enabletouchboxshy3" : "Enable Touch Box(Shy Anim 3)",
+				"ui_enablewatereffect" : "Enable Water Effect",
+				"ui_fishleftheight" : "Fish Curve Left Height",
+				"ui_fishrightheight" : "Fish Curve Right Height",
+				"ui_futuristic" : "Futuristic",
+				"ui_hagakureruri1" : "Hagakure Ruri Classic",
+				"ui_jellyfishleftshift" : "Jellyfish Left Shift",
+				"ui_jellyfishsize" : "Jellyfish Size",
+				"ui_jellyfishtopshift" : "Jellyfish Top shift",
+				"ui_juewa1" : "Juewa Classic",
+				"ui_juewa2" : "Juewa Bikini",
+				"ui_latitude" : "Latitude",
+				"ui_lilyiro1" : "Lilyiro Classic",
+				"ui_lilyiro2" : "Lilyiro Bloody",
+				"ui_lilyiro3" : "Lilyiro Exotic",
+				"ui_live2dbottomshift" : "Live2D Container Bottom Shift",
+				"ui_live2dcostume" : "Live2D Costume",
+				"ui_live2dheight" : "Live2D Container Height",
+				"ui_live2dleftshift" : "Live2D Container Left Shift",
+				"ui_live2dwidth" : "Live2D Container Width",
+				"ui_longitude" : "Longitude",
+				"ui_none" : "None",
+				"ui_panelleft" : "Panel Left Shift",
+				"ui_panelsize" : "Panel Size",
+				"ui_paneltop" : "Panel Top Shift",
+				"ui_plantleftshift" : "Plant Left Shift",
+				"ui_plantsize" : "Plant Size",
+				"ui_planttopshift" : "Plant Top Shift",
+				"ui_silenus1" : "Silenus Classic",
+				"ui_silenus2" : "Silenus School",
+				"ui_spineanimation" : "Spine Animation",
+				"ui_timeregreeting" : "Time between Two Greet Event",
+				"ui_touchboxmoodborderdisplay" : "Display Touch Box Border(Emotion Anim)",
+				"ui_touchboxmoodheight" : "Touch Box Height(Emotion Anim)",
+				"ui_touchboxmoodleft" : "Touch Box Left(Emotion Anim)",
+				"ui_touchboxmoodtop" : "Touch Box Top(Emotion Anim)",
+				"ui_touchboxmoodwidth" : "Touch Box Width(Emotion Anim)",
+				"ui_touchboxshy1borderdisplay" : "Display Touch Box Border(Shy Anim 1)",
+				"ui_touchboxshy1height" : "Touch Box Height(Shy Anim 1)",
+				"ui_touchboxshy1left" : "Touch Box Left(Shy Anim 1)",
+				"ui_touchboxshy1top" : "Touch Box Top(Shy Anim 1)",
+				"ui_touchboxshy1width" : "Touch Box Width(Shy Anim 1)",
+				"ui_touchboxshy2borderdisplay" : "Display Touch Box Border(Shy Anim 2)",
+				"ui_touchboxshy2height" : "Touch Box Height(Shy Anim 2)",
+				"ui_touchboxshy2left" : "Touch Box Left(Shy Anim 2)",
+				"ui_touchboxshy2top" : "Touch Box Top(Shy Anim 2)",
+				"ui_touchboxshy2width" : "Touch Box Width(Shy Anim 2)",
+				"ui_touchboxshy3borderdisplay" : "Display Touch Box Border(Shy Anim 3)",
+				"ui_touchboxshy3height" : "Touch Box Height(Shy Anim 3)",
+				"ui_touchboxshy3left" : "Touch Box Left(Shy Anim 3)",
+				"ui_touchboxshy3top" : "Touch Box Top(Shy Anim 3)",
+				"ui_touchboxshy3width" : "Touch Box Width(Shy Anim 3)",
+				"ui_usewebglbackground" : "Use WebGL to Render Background Effect(Instead of using a image)",
+				"ui_virgina1" : "Virgina Classic",
+				"ui_virgina2" : "Virgina Bikini",
+				"ui_virgina3" : "Virgina Thorns",
+				"ui_waterripples" : "Enable Water Ripples"
+			},
+			"zh-chs" : 
+			{
+				"ui_akaset1" : "阿卡赛特 经典",
+				"ui_akaset2" : "阿卡赛特 猫咪",
+				"ui_akaset3" : "阿卡赛特 联动",
+				"ui_akaset4" : "阿卡赛特 泳装",
+				"ui_akasetleftshift" : "阿卡赛特相对左侧偏移程度",
+				"ui_akasetsize" : "阿卡赛特大小",
+				"ui_akasettopshift" : "阿卡赛特相对顶部偏移程度",
+				"ui_alisa1" : "爱丽莎 经典",
+				"ui_alisa2" : "爱丽莎 女仆",
+				"ui_amaneinori1" : "天音祈 经典",
+				"ui_amaneinori2" : "天音祈 校服",
+				"ui_animationspeed" : "Spine动画速度",
+				"ui_astronomical" : "天文钟",
+				"ui_autoripples" : "自动产生涟漪",
+				"ui_backgroundcolor" : "最底层背景渐变颜色(linear-gradient)",
+				"ui_blinkfix" : "眨眼修复(如果Live2D人物并不眨眼,勾选这个然后重启)",
+				"ui_bubblespeed" : "气泡漂移速度",
+				"ui_clock" : "时钟",
+				"ui_clockleft" : "时钟相对左侧位置",
+				"ui_clocksize" : "时钟大小",
+				"ui_clocktop" : "时钟相对顶部位置",
+				"ui_colcher1" : "柯露雪儿 经典",
+				"ui_colcher2" : "柯露雪儿 礼服",
+				"ui_control1x" : "鱼群曲线控制点1 X轴坐标",
+				"ui_control1y" : "鱼群曲线控制点1 Y轴坐标",
+				"ui_control2x" : "鱼群曲线控制点2 X轴坐标",
+				"ui_control2y" : "鱼群曲线控制点2 Y轴坐标",
+				"ui_enablebubble" : "开启泡泡特效(重启生效)",
+				"ui_enablefisheffect" : "开启鱼群特效(重启生效)",
+				"ui_enablefuturisticpanel" : "开启科技感面板",
+				"ui_enablehalo" : "开启光晕特效",
+				"ui_enablelive2d" : "开启Live2D(实验功能)(重启生效)",
+				"ui_enableray" : "开启光束效果(重启生效)",
+				"ui_enableterminal" : "开启终端(Debug)",
+				"ui_enabletouchboxmood" : "使用交互区域(情绪动画)",
+				"ui_enabletouchboxshy1" : "使用交互区域(害羞动画1)",
+				"ui_enabletouchboxshy2" : "使用交互区域(害羞动画2)",
+				"ui_enabletouchboxshy3" : "使用交互区域(害羞动画3)",
+				"ui_enablewatereffect" : "开启水纹特效(重启生效)",
+				"ui_fishleftheight" : "鱼群曲线左侧高度",
+				"ui_fishrightheight" : "鱼群曲线右侧高度",
+				"ui_futuristic" : "未来感时钟",
+				"ui_hagakureruri1" : "叶隐琉璃 经典",
+				"ui_hagakureruri2" : "叶隐琉璃 泳装",
+				"ui_jellyfishleftshift" : "水母相对左侧偏移程度",
+				"ui_jellyfishsize" : "水母大小",
+				"ui_jellyfishtopshift" : "水母相对顶部偏移程度",
+				"ui_juewa1" : "九华 经典",
+				"ui_juewa2" : "九华 泳装",
+				"ui_latitude" : "纬度",
+				"ui_lilyiro1" : "莉莉艾洛 经典",
+				"ui_lilyiro2" : "莉莉艾洛 樱红",
+				"ui_lilyiro3" : "莉莉艾洛 异域",
+				"ui_live2dbottomshift" : "Live2D区域相对底部偏移",
+				"ui_live2dcostume" : "Live2D时装",
+				"ui_live2dheight" : "Live2D区域高度",
+				"ui_live2dleftshift" : "Live2D区域相对左侧偏移",
+				"ui_live2dwidth" : "Live2D区域宽度(影响模型实际大小)",
+				"ui_longitude" : "经度",
+				"ui_none" : "无",
+				"ui_panelleft" : "面板相对左侧位置",
+				"ui_panelsize" : "面板大小",
+				"ui_paneltop" : "面板相对顶部位置",
+				"ui_plantleftshift" : "背景植物相对左侧偏移程度",
+				"ui_plantsize" : "背景植物大小",
+				"ui_planttopshift" : "背景植物相对顶部偏移程度",
+				"ui_silenus1" : "西勒诺斯 经典",
+				"ui_silenus2" : "西勒诺斯 校服",
+				"ui_spineanimation" : "Spine动画(播放/暂停)",
+				"ui_timeregreeting" : "问好动画触发时间间隔(单位:秒)",
+				"ui_touchboxmoodborderdisplay" : "显示交互区域边界(情绪动画)",
+				"ui_touchboxmoodheight" : "交互区域高度(情绪动画)",
+				"ui_touchboxmoodleft" : "交互区域相对左侧位置(情绪动画)",
+				"ui_touchboxmoodtop" : "交互区域相对顶部位置(情绪动画)",
+				"ui_touchboxmoodwidth" : "交互区域宽度(情绪动画)",
+				"ui_touchboxshy1borderdisplay" : "显示交互区域边界(害羞动画1)",
+				"ui_touchboxshy1height" : "交互区域高度(害羞动画1)",
+				"ui_touchboxshy1left" : "交互区域相对左侧位置(害羞动画1)",
+				"ui_touchboxshy1top" : "交互区域相对顶部位置(害羞动画1)",
+				"ui_touchboxshy1width" : "交互区域宽度(害羞动画1)",
+				"ui_touchboxshy2borderdisplay" : "显示交互区域边界(害羞动画2)",
+				"ui_touchboxshy2height" : "交互区域高度(害羞动画2)",
+				"ui_touchboxshy2left" : "交互区域相对左侧位置(害羞动画2)",
+				"ui_touchboxshy2top" : "交互区域相对顶部位置(害羞动画2)",
+				"ui_touchboxshy2width" : "交互区域宽度(害羞动画2)",
+				"ui_touchboxshy3borderdisplay" : "显示交互区域边界(害羞动画3)",
+				"ui_touchboxshy3height" : "交互区域高度(害羞动画3)",
+				"ui_touchboxshy3left" : "交互区域相对左侧位置(害羞动画3)",
+				"ui_touchboxshy3top" : "交互区域相对顶部位置(害羞动画3)",
+				"ui_touchboxshy3width" : "交互区域宽度(害羞动画3)",
+				"ui_usewebglbackground" : "使用WebGL特效渲染背景(而不是使用图片)",
+				"ui_virgina1" : "薇姬娜 经典",
+				"ui_virgina2" : "薇姬娜 泳装",
+				"ui_virgina3" : "薇姬娜 荆棘",
+				"ui_waterripples" : "启用水波涟漪效果(仅在使用图片背景时可用)"
+			}
+		},
+		"properties" : 
+		{
+			"akasetleftshift" : 
+			{
+				"fraction" : true,
+				"index" : 25,
+				"max" : 1,
+				"min" : -1,
+				"order" : 125,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_akasetleftshift",
+				"type" : "slider",
+				"value" : -0.35
+			},
+			"akasetsize" : 
+			{
+				"fraction" : true,
+				"index" : 24,
+				"max" : 1.5,
+				"min" : 0.5,
+				"order" : 124,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_akasetsize",
+				"type" : "slider",
+				"value" : 1.08
+			},
+			"akasettopshift" : 
+			{
+				"fraction" : true,
+				"index" : 26,
+				"max" : 1,
+				"min" : -1,
+				"order" : 126,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_akasettopshift",
+				"type" : "slider",
+				"value" : -0.26
+			},
+			"animationspeed" : 
+			{
+				"fraction" : true,
+				"index" : 1,
+				"max" : 3,
+				"min" : 0.1,
+				"order" : 101,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_animationspeed",
+				"type" : "slider",
+				"value" : 1
+			},
+			"autoripples" : 
+			{
+				"condition" : "waterripples.value && !usewebglbackground.value  == true",
+				"index" : 16,
+				"order" : 116,
+				"text" : "ui_autoripples",
+				"type" : "bool",
+				"value" : false
+			},
+			"backgroundcolor" : 
+			{
+				"index" : 68,
+				"order" : 168,
+				"text" : "ui_backgroundcolor",
+				"type" : "textinput",
+				"value" : "linear-gradient(30deg,#3c54ff,#a2eded 60%,#d3fcfc 90%,#ffffff)"
+			},
+			"blinkfix" : 
+			{
+				"condition" : "enablelive2d.value == true",
+				"index" : 23,
+				"order" : 123,
+				"text" : "ui_blinkfix",
+				"type" : "bool",
+				"value" : false
+			},
+			"bubblespeed" : 
+			{
+				"condition" : "enablebubble.value && usewebglbackground.value = true",
+				"fraction" : true,
+				"index" : 14,
+				"max" : 3,
+				"min" : 0.1,
+				"order" : 114,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "ui_bubblespeed",
+				"type" : "slider",
+				"value" : 1
+			},
+			"clock" : 
+			{
+				"index" : 37,
+				"options" : 
+				[
+					{
+						"label" : "ui_none",
+						"value" : "0"
+					},
+					{
+						"label" : "ui_futuristic",
+						"value" : "1"
+					},
+					{
+						"label" : "ui_astronomical",
+						"value" : "2"
+					}
+				],
+				"order" : 137,
+				"text" : "ui_clock",
+				"type" : "combo",
+				"value" : "1"
+			},
+			"clockleft" : 
+			{
+				"condition" : "clock.value != 0",
+				"fraction" : true,
+				"index" : 39,
+				"max" : 100,
+				"min" : 0,
+				"order" : 139,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_clockleft",
+				"type" : "slider",
+				"value" : 79
+			},
+			"clocksize" : 
+			{
+				"condition" : "clock.value != 0",
+				"fraction" : true,
+				"index" : 38,
+				"max" : 3,
+				"min" : 0.5,
+				"order" : 138,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "ui_clocksize",
+				"type" : "slider",
+				"value" : 1
+			},
+			"clocktop" : 
+			{
+				"condition" : "clock.value != 0",
+				"fraction" : true,
+				"index" : 40,
+				"max" : 100,
+				"min" : 0,
+				"order" : 140,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_clocktop",
+				"type" : "slider",
+				"value" : 75
+			},
+			"control1x" : 
+			{
+				"condition" : "usewebglbackground.value && enablefisheffect.value ==true",
+				"fraction" : true,
+				"index" : 7,
+				"max" : 1,
+				"min" : -1,
+				"order" : 107,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_control1x",
+				"type" : "slider",
+				"value" : -0.3
+			},
+			"control1y" : 
+			{
+				"condition" : "usewebglbackground.value && enablefisheffect.value ==true",
+				"fraction" : true,
+				"index" : 8,
+				"max" : 1,
+				"min" : -1,
+				"order" : 108,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_control1y",
+				"type" : "slider",
+				"value" : 0.5
+			},
+			"control2x" : 
+			{
+				"condition" : "usewebglbackground.value && enablefisheffect.value ==true",
+				"fraction" : true,
+				"index" : 9,
+				"max" : 1,
+				"min" : -1,
+				"order" : 109,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_control2x",
+				"type" : "slider",
+				"value" : 0.4
+			},
+			"control2y" : 
+			{
+				"condition" : "usewebglbackground.value && enablefisheffect.value ==true",
+				"fraction" : true,
+				"index" : 10,
+				"max" : 1,
+				"min" : -1,
+				"order" : 110,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_control2y",
+				"type" : "slider",
+				"value" : -0.4
+			},
+			"enablebubble" : 
+			{
+				"condition" : "usewebglbackground.value==true",
+				"index" : 13,
+				"order" : 113,
+				"text" : "ui_enablebubble",
+				"type" : "bool",
+				"value" : true
+			},
+			"enablefisheffect" : 
+			{
+				"condition" : "usewebglbackground.value ==true",
+				"index" : 4,
+				"order" : 104,
+				"text" : "ui_enablefisheffect",
+				"type" : "bool",
+				"value" : true
+			},
+			"enablefuturisticpanel" : 
+			{
+				"index" : 33,
+				"order" : 133,
+				"text" : "ui_enablefuturisticpanel",
+				"type" : "bool",
+				"value" : true
+			},
+			"enablehalo" : 
+			{
+				"condition" : "usewebglbackground.value==true",
+				"index" : 11,
+				"order" : 111,
+				"text" : "ui_enablehalo",
+				"type" : "bool",
+				"value" : true
+			},
+			"enablelive2d" : 
+			{
+				"index" : 17,
+				"order" : 117,
+				"text" : "ui_enablelive2d",
+				"type" : "bool",
+				"value" : false
+			},
+			"enableray" : 
+			{
+				"condition" : "usewebglbackground.value==true",
+				"index" : 12,
+				"order" : 112,
+				"text" : "ui_enableray",
+				"type" : "bool",
+				"value" : true
+			},
+			"enableterminal" : 
+			{
+				"index" : 69,
+				"order" : 169,
+				"text" : "ui_enableterminal",
+				"type" : "bool",
+				"value" : false
+			},
+			"enabletouchboxmood" : 
+			{
+				"index" : 44,
+				"order" : 144,
+				"text" : "ui_enabletouchboxmood",
+				"type" : "bool",
+				"value" : true
+			},
+			"enabletouchboxshy1" : 
+			{
+				"index" : 50,
+				"order" : 150,
+				"text" : "ui_enabletouchboxshy1",
+				"type" : "bool",
+				"value" : true
+			},
+			"enabletouchboxshy2" : 
+			{
+				"index" : 56,
+				"order" : 156,
+				"text" : "ui_enabletouchboxshy2",
+				"type" : "bool",
+				"value" : true
+			},
+			"enabletouchboxshy3" : 
+			{
+				"index" : 62,
+				"order" : 162,
+				"text" : "ui_enabletouchboxshy3",
+				"type" : "bool",
+				"value" : true
+			},
+			"enablewatereffect" : 
+			{
+				"condition" : "usewebglbackground.value == true",
+				"index" : 3,
+				"order" : 103,
+				"text" : "ui_enablewatereffect",
+				"type" : "bool",
+				"value" : true
+			},
+			"fishleftheight" : 
+			{
+				"condition" : "usewebglbackground.value && enablefisheffect.value ==true",
+				"fraction" : true,
+				"index" : 5,
+				"max" : 1,
+				"min" : -1,
+				"order" : 105,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_fishleftheight",
+				"type" : "slider",
+				"value" : 0.6
+			},
+			"fishrightheight" : 
+			{
+				"condition" : "usewebglbackground.value && enablefisheffect.value ==true",
+				"fraction" : true,
+				"index" : 6,
+				"max" : 1,
+				"min" : -1,
+				"order" : 106,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_fishrightheight",
+				"type" : "slider",
+				"value" : 0.1
+			},
+			"jellyfishleftshift" : 
+			{
+				"fraction" : true,
+				"index" : 31,
+				"max" : 1,
+				"min" : -1,
+				"order" : 131,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_jellyfishleftshift",
+				"type" : "slider",
+				"value" : 0
+			},
+			"jellyfishsize" : 
+			{
+				"fraction" : true,
+				"index" : 30,
+				"max" : 1.5,
+				"min" : 0.5,
+				"order" : 130,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_jellyfishsize",
+				"type" : "slider",
+				"value" : 1
+			},
+			"jellyfishtopshift" : 
+			{
+				"fraction" : true,
+				"index" : 32,
+				"max" : 1,
+				"min" : -1,
+				"order" : 132,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_jellyfishtopshift",
+				"type" : "slider",
+				"value" : 0
+			},
+			"latitude" : 
+			{
+				"condition" : "clock.value == 2",
+				"fraction" : true,
+				"index" : 42,
+				"max" : 90,
+				"min" : -90,
+				"order" : 142,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "ui_latitude",
+				"type" : "slider",
+				"value" : 35
+			},
+			"live2dbottomshift" : 
+			{
+				"condition" : "enablelive2d.value == true",
+				"fraction" : true,
+				"index" : 22,
+				"max" : 100,
+				"min" : 0,
+				"order" : 122,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_live2dbottomshift",
+				"type" : "slider",
+				"value" : 3
+			},
+			"live2dcostume" : 
+			{
+				"condition" : "enablelive2d.value == true",
+				"index" : 18,
+				"options" : 
+				[
+					{
+						"label" : "ui_akaset1",
+						"value" : "akaset1"
+					},
+					{
+						"label" : "ui_akaset2",
+						"value" : "akaset2"
+					},
+					{
+						"label" : "ui_akaset3",
+						"value" : "akaset3"
+					},
+					{
+						"label" : "ui_akaset4",
+						"value" : "akaset4"
+					},
+					{
+						"label" : "ui_silenus1",
+						"value" : "silenus1"
+					},
+					{
+						"label" : "ui_silenus2",
+						"value" : "silenus2"
+					},
+					{
+						"label" : "ui_juewa1",
+						"value" : "juewa1"
+					},
+					{
+						"label" : "ui_juewa2",
+						"value" : "juewa2"
+					},
+					{
+						"label" : "ui_hagakureruri1",
+						"value" : "hagakureruri1"
+					},
+					{
+						"label" : "ui_hagakureruri2",
+						"value" : "hagakureruri2"
+					},
+					{
+						"label" : "ui_virgina1",
+						"value" : "virgina1"
+					},
+					{
+						"label" : "ui_virgina2",
+						"value" : "virgina2"
+					},
+					{
+						"label" : "ui_virgina3",
+						"value" : "virgina3"
+					},
+					{
+						"label" : "ui_colcher1",
+						"value" : "colcher1"
+					},
+					{
+						"label" : "ui_colcher2",
+						"value" : "colcher2"
+					},
+					{
+						"label" : "ui_alisa1",
+						"value" : "alisa1"
+					},
+					{
+						"label" : "ui_alisa2",
+						"value" : "alisa2"
+					},
+					{
+						"label" : "ui_amaneinori1",
+						"value" : "amaneinori1"
+					},
+					{
+						"label" : "ui_amaneinori2",
+						"value" : "amaneinori2"
+					},
+					{
+						"label" : "ui_lilyiro1",
+						"value" : "lilyiro1"
+					},
+					{
+						"label" : "ui_lilyiro2",
+						"value" : "lilyiro2"
+					},
+					{
+						"label" : "ui_lilyiro3",
+						"value" : "lilyiro3"
+					}
+				],
+				"order" : 118,
+				"text" : "ui_live2dcostume",
+				"type" : "combo",
+				"value" : "akaset1"
+			},
+			"live2dheight" : 
+			{
+				"condition" : "enablelive2d.value == true",
+				"fraction" : true,
+				"index" : 20,
+				"max" : 100,
+				"min" : 0,
+				"order" : 120,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_live2dheight",
+				"type" : "slider",
+				"value" : 40
+			},
+			"live2dleftshift" : 
+			{
+				"condition" : "enablelive2d.value == true",
+				"fraction" : true,
+				"index" : 21,
+				"max" : 100,
+				"min" : 0,
+				"order" : 121,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_live2dleftshift",
+				"type" : "slider",
+				"value" : 0
+			},
+			"live2dwidth" : 
+			{
+				"condition" : "enablelive2d.value == true",
+				"fraction" : true,
+				"index" : 19,
+				"max" : 100,
+				"min" : 0,
+				"order" : 119,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_live2dwidth",
+				"type" : "slider",
+				"value" : 20
+			},
+			"longitude" : 
+			{
+				"condition" : "clock.value == 2",
+				"fraction" : true,
+				"index" : 41,
+				"max" : 360,
+				"min" : 0,
+				"order" : 141,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "ui_longitude",
+				"type" : "slider",
+				"value" : 120
+			},
+			"panelleft" : 
+			{
+				"condition" : "enablefuturisticpanel.value == true",
+				"fraction" : true,
+				"index" : 35,
+				"max" : 100,
+				"min" : 0,
+				"order" : 135,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_panelleft",
+				"type" : "slider",
+				"value" : 5
+			},
+			"panelsize" : 
+			{
+				"condition" : "enablefuturisticpanel.value == true",
+				"fraction" : true,
+				"index" : 34,
+				"max" : 3,
+				"min" : 0.5,
+				"order" : 134,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "ui_panelsize",
+				"type" : "slider",
+				"value" : 1
+			},
+			"paneltop" : 
+			{
+				"condition" : "enablefuturisticpanel.value == true",
+				"fraction" : true,
+				"index" : 36,
+				"max" : 100,
+				"min" : 0,
+				"order" : 136,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_paneltop",
+				"type" : "slider",
+				"value" : 5
+			},
+			"plantleftshift" : 
+			{
+				"fraction" : true,
+				"index" : 28,
+				"max" : 1,
+				"min" : -1,
+				"order" : 128,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_plantleftshift",
+				"type" : "slider",
+				"value" : 0
+			},
+			"plantsize" : 
+			{
+				"fraction" : true,
+				"index" : 27,
+				"max" : 1.5,
+				"min" : 0.5,
+				"order" : 127,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_plantsize",
+				"type" : "slider",
+				"value" : 1.02
+			},
+			"planttopshift" : 
+			{
+				"fraction" : true,
+				"index" : 29,
+				"max" : 1,
+				"min" : -1,
+				"order" : 129,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "ui_planttopshift",
+				"type" : "slider",
+				"value" : -0.02
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.23137254901960785 0.9215686274509803 0.9607843137254902"
+			},
+			"spineanimation" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "ui_spineanimation",
+				"type" : "bool",
+				"value" : true
+			},
+			"timeregreeting" : 
+			{
+				"fraction" : true,
+				"index" : 43,
+				"max" : 300,
+				"min" : 10,
+				"order" : 143,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_timeregreeting",
+				"type" : "slider",
+				"value" : 120
+			},
+			"touchboxmoodborderdisplay" : 
+			{
+				"condition" : "enabletouchboxmood.value == true",
+				"index" : 45,
+				"order" : 145,
+				"text" : "ui_touchboxmoodborderdisplay",
+				"type" : "bool",
+				"value" : false
+			},
+			"touchboxmoodheight" : 
+			{
+				"condition" : "enabletouchboxmood.value == true",
+				"fraction" : true,
+				"index" : 49,
+				"max" : 50,
+				"min" : 0,
+				"order" : 149,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxmoodheight",
+				"type" : "slider",
+				"value" : 17
+			},
+			"touchboxmoodleft" : 
+			{
+				"condition" : "enabletouchboxmood.value == true",
+				"fraction" : true,
+				"index" : 46,
+				"max" : 100,
+				"min" : 0,
+				"order" : 146,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxmoodleft",
+				"type" : "slider",
+				"value" : 69
+			},
+			"touchboxmoodtop" : 
+			{
+				"condition" : "enabletouchboxmood.value == true",
+				"fraction" : true,
+				"index" : 47,
+				"max" : 100,
+				"min" : 0,
+				"order" : 147,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxmoodtop",
+				"type" : "slider",
+				"value" : 27
+			},
+			"touchboxmoodwidth" : 
+			{
+				"condition" : "enabletouchboxmood.value == true",
+				"fraction" : true,
+				"index" : 48,
+				"max" : 50,
+				"min" : 0,
+				"order" : 148,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxmoodwidth",
+				"type" : "slider",
+				"value" : 8
+			},
+			"touchboxshy1borderdisplay" : 
+			{
+				"condition" : "enabletouchboxshy1.value == true",
+				"index" : 51,
+				"order" : 151,
+				"text" : "ui_touchboxshy1borderdisplay",
+				"type" : "bool",
+				"value" : false
+			},
+			"touchboxshy1height" : 
+			{
+				"condition" : "enabletouchboxshy1.value == true",
+				"fraction" : true,
+				"index" : 55,
+				"max" : 50,
+				"min" : 0,
+				"order" : 155,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxshy1height",
+				"type" : "slider",
+				"value" : 20
+			},
+			"touchboxshy1left" : 
+			{
+				"condition" : "enabletouchboxshy1.value == true",
+				"fraction" : true,
+				"index" : 52,
+				"max" : 100,
+				"min" : 0,
+				"order" : 152,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxshy1left",
+				"type" : "slider",
+				"value" : 47
+			},
+			"touchboxshy1top" : 
+			{
+				"condition" : "enabletouchboxshy1.value == true",
+				"fraction" : true,
+				"index" : 53,
+				"max" : 100,
+				"min" : 0,
+				"order" : 153,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxshy1top",
+				"type" : "slider",
+				"value" : 55
+			},
+			"touchboxshy1width" : 
+			{
+				"condition" : "enabletouchboxshy1.value == true",
+				"fraction" : true,
+				"index" : 54,
+				"max" : 50,
+				"min" : 0,
+				"order" : 154,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxshy1width",
+				"type" : "slider",
+				"value" : 15
+			},
+			"touchboxshy2borderdisplay" : 
+			{
+				"condition" : "enabletouchboxshy2.value == true",
+				"index" : 57,
+				"order" : 157,
+				"text" : "ui_touchboxshy2borderdisplay",
+				"type" : "bool",
+				"value" : false
+			},
+			"touchboxshy2height" : 
+			{
+				"condition" : "enabletouchboxshy2.value == true",
+				"fraction" : true,
+				"index" : 61,
+				"max" : 50,
+				"min" : 0,
+				"order" : 161,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxshy2height",
+				"type" : "slider",
+				"value" : 14
+			},
+			"touchboxshy2left" : 
+			{
+				"condition" : "enabletouchboxshy2.value == true",
+				"fraction" : true,
+				"index" : 58,
+				"max" : 100,
+				"min" : 0,
+				"order" : 158,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxshy2left",
+				"type" : "slider",
+				"value" : 58
+			},
+			"touchboxshy2top" : 
+			{
+				"condition" : "enabletouchboxshy2.value == true",
+				"fraction" : true,
+				"index" : 59,
+				"max" : 100,
+				"min" : 0,
+				"order" : 159,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxshy2top",
+				"type" : "slider",
+				"value" : 43
+			},
+			"touchboxshy2width" : 
+			{
+				"condition" : "enabletouchboxshy2.value == true",
+				"fraction" : true,
+				"index" : 60,
+				"max" : 50,
+				"min" : 0,
+				"order" : 160,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxshy2width",
+				"type" : "slider",
+				"value" : 13
+			},
+			"touchboxshy3borderdisplay" : 
+			{
+				"condition" : "enabletouchboxshy3.value == true",
+				"index" : 63,
+				"order" : 163,
+				"text" : "ui_touchboxshy3borderdisplay",
+				"type" : "bool",
+				"value" : false
+			},
+			"touchboxshy3height" : 
+			{
+				"condition" : "enabletouchboxshy3.value == true",
+				"fraction" : true,
+				"index" : 67,
+				"max" : 50,
+				"min" : 0,
+				"order" : 167,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxshy3height",
+				"type" : "slider",
+				"value" : 22
+			},
+			"touchboxshy3left" : 
+			{
+				"condition" : "enabletouchboxshy3.value == true",
+				"fraction" : true,
+				"index" : 64,
+				"max" : 100,
+				"min" : 0,
+				"order" : 164,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxshy3left",
+				"type" : "slider",
+				"value" : 24
+			},
+			"touchboxshy3top" : 
+			{
+				"condition" : "enabletouchboxshy3.value == true",
+				"fraction" : true,
+				"index" : 65,
+				"max" : 100,
+				"min" : 0,
+				"order" : 165,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxshy3top",
+				"type" : "slider",
+				"value" : 65
+			},
+			"touchboxshy3width" : 
+			{
+				"condition" : "enabletouchboxshy3.value == true",
+				"fraction" : true,
+				"index" : 66,
+				"max" : 50,
+				"min" : 0,
+				"order" : 166,
+				"precision" : 1,
+				"step" : 1,
+				"text" : "ui_touchboxshy3width",
+				"type" : "slider",
+				"value" : 17
+			},
+			"usewebglbackground" : 
+			{
+				"index" : 2,
+				"order" : 102,
+				"text" : "ui_usewebglbackground",
+				"type" : "bool",
+				"value" : false
+			},
+			"waterripples" : 
+			{
+				"condition" : "usewebglbackground.value == false",
+				"index" : 15,
+				"order" : 115,
+				"text" : "ui_waterripples",
+				"type" : "bool",
+				"value" : true
+			}
+		},
+		"supportsaudioprocessing" : true
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "Anime" ],
+	"title" : "Akaset in the Water",
+	"type" : "Web",
+	"version" : 15,
+	"visibility" : "public",
+	"workshopid" : "2884757949",
+	"workshopurl" : "steam://url/CommunityFilePage/2884757949"
+}

@@ -1,0 +1,748 @@
+<html>
+
+<head>
+    <script src="scripts/spine-player.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/spine-player.css" />
+
+    <style>
+
+
+        .c {
+            width: 240px;
+            height: 240px;
+            border: 3px solid #98bdcd;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 50px);
+        }
+
+        .c:after {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 10px solid #badfef;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            animation: R 10s infinite linear;
+        }
+
+        .c2 {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #9cb4be;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 1px;
+            animation: L 80s infinite linear;
+            box-sizing: border-box;
+        }
+
+        .c3 {
+            width: 33%;
+            height: 33%;
+            border: 2px solid #c27f77;
+            border-radius: 50%;
+            transform: translate3d(-50%, -50%, -5px);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        .c3:after {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: -5px;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid #c27f77;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            animation: L 5s infinite linear;
+        }
+
+        .c4 {
+            width: 75px;
+            height: 75px;
+            transform: translate3d(-50%, -50%, 0px);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+
+        .c4:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: -3px;
+            top: -3px;
+            border-radius: 50%;
+            border: 3px solid #98bdcd;
+            border-left-color: transparent;
+            animation: R 5s infinite linear;
+        }
+
+        .c5 {
+            width: 77px;
+            height: 77px;
+            transform: translate3d(-50%, -50%, -65px);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+        }
+
+        .c5:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            border: 1px solid #9cb4be;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            animation: L 5s infinite linear;
+        }
+
+        .c6 {
+            width: 55px;
+            height: 55px;
+            transform: translate3d(-50%, -50%, -61px);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+        }
+
+        .c6:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            border: 1px solid #9cb4be;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: R 10s infinite linear;
+        }
+
+        i {
+            height: 15px;
+            width: 1px;
+            background: #98bdcd;
+            position: absolute;
+            left: 50%;
+            margin-left: -10px;
+            transform-origin: 1000% 1005%;
+        }
+
+        i:nth-child(1) {
+            transform: rotate(-5deg);
+        }
+
+        i:nth-child(2) {
+            transform: rotate(5deg);
+        }
+
+        i:nth-child(3) {
+            transform: rotate(15deg);
+        }
+
+        i:nth-child(4) {
+            transform: rotate(25deg);
+        }
+
+        i:nth-child(5) {
+            transform: rotate(35deg);
+        }
+
+        i:nth-child(6) {
+            transform: rotate(45deg);
+        }
+
+        i:nth-child(7) {
+            transform: rotate(55deg);
+        }
+
+        i:nth-child(8) {
+            transform: rotate(65deg);
+        }
+
+        i:nth-child(9) {
+            transform: rotate(75deg);
+        }
+
+        i:nth-child(10) {
+            transform: rotate(85deg);
+        }
+
+        i:nth-child(11) {
+            transform: rotate(95deg);
+        }
+
+        i:nth-child(12) {
+            transform: rotate(105deg);
+        }
+
+        i:nth-child(13) {
+            transform: rotate(115deg);
+        }
+
+        i:nth-child(14) {
+            transform: rotate(125deg);
+        }
+
+        i:nth-child(15) {
+            transform: rotate(135deg);
+        }
+
+        i:nth-child(16) {
+            transform: rotate(145deg);
+        }
+
+        i:nth-child(17) {
+            transform: rotate(155deg);
+        }
+
+        i:nth-child(18) {
+            transform: rotate(165deg);
+        }
+
+        i:nth-child(19) {
+            transform: rotate(175deg);
+        }
+
+        i:nth-child(20) {
+            transform: rotate(185deg);
+        }
+
+        i:nth-child(21) {
+            transform: rotate(195deg);
+        }
+
+        i:nth-child(22) {
+            transform: rotate(205deg);
+        }
+
+        i:nth-child(23) {
+            transform: rotate(215deg);
+        }
+
+        i:nth-child(24) {
+            transform: rotate(225deg);
+        }
+
+        i:nth-child(25) {
+            transform: rotate(235deg);
+        }
+
+        i:nth-child(26) {
+            transform: rotate(245deg);
+        }
+
+        i:nth-child(27) {
+            transform: rotate(255deg);
+        }
+
+        i:nth-child(28) {
+            transform: rotate(265deg);
+        }
+
+        i:nth-child(29) {
+            transform: rotate(275deg);
+        }
+
+        i:nth-child(30) {
+            transform: rotate(285deg);
+        }
+
+        i:nth-child(31) {
+            transform: rotate(295deg);
+        }
+
+        i:nth-child(32) {
+            transform: rotate(305deg);
+        }
+
+        i:nth-child(33) {
+            transform: rotate(315deg);
+        }
+
+        i:nth-child(34) {
+            transform: rotate(325deg);
+        }
+
+        i:nth-child(35) {
+            transform: rotate(335deg);
+        }
+
+        i:nth-child(36) {
+            transform: rotate(345deg);
+        }
+
+        i:nth-child(37) {
+            transform: rotate(355deg);
+        }
+
+        i:nth-child(38) {
+            transform: rotate(365deg);
+        }
+
+        figure {
+            width: 305px;
+            height: 305px;
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotateX(20deg) rotateY(-20deg) scale(1.1, 1.1);
+            transition: 1.4s;
+            transform-style: preserve-3d;
+        }
+
+        figure:hover {
+            transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg) scale(1.1, 1.1);
+        }
+
+        @keyframes L {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg)
+            }
+        }
+
+        @keyframes R {
+            0% {
+                transform: rotate(20deg);
+            }
+
+            100% {
+                transform: rotate(380deg)
+            }
+        }
+    </style>
+</head>
+
+<body style="overflow:hidden;margin:0;">
+    <div style="display:block" id="horizontal-wrapper">
+    
+    <div id="click-cover" style="position:absolute;top:0;bottom:0;left:0;right:0;z-index:25">
+        <div id="touchbox-mood" , style="position:absolute;top:50%;left:50%;width:10%;height:10%;">
+            <div id="touchbox-mood-inner" ,
+                style="position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;border:2px dashed red;display:none">
+            </div>
+        </div>
+        <div id="touchbox-shy1" , style="position:absolute;top:60%;left:50%;width:10%;height:10%;">
+            <div id="touchbox-shy1-inner" ,
+                style="position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;border:2px dashed green;display:none">
+            </div>
+        </div>
+        <div id="touchbox-shy2" , style="position:absolute;top:60%;left:50%;width:10%;height:10%;">
+            <div id="touchbox-shy2-inner" ,
+                style="position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;border:2px dashed blue;display:none">
+            </div>
+        </div>
+        <div id="touchbox-shy3" , style="position:absolute;top:60%;left:50%;width:10%;height:10%;">
+            <div id="touchbox-shy3-inner" ,
+                style="position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;border:2px dashed yellow;display:none">
+            </div>
+        </div>
+    </div>
+    
+    <div id="clock-wrapper" style="position:absolute;z-index:27;display:inline;display:inline;left:35%;top:50%;">
+        <figure id="clock">
+            <div class="c">
+                <div id="text-inner" align="center"
+                    style="position: absolute;width:100%;height:60%;left:50%;top:50%;margin-left:-50%;margin-top:-30%;line-height:96px;font-size:48px;font-family: monospace;color: #daf6ff;text-shadow: 0 0 12px rgba(10, 175, 230, 1),  0 0 12px rgba(10, 175, 230, 0);">
+                    00:00:00</div>
+            </div>
+            <div class="c2">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+            <div class="c5"></div>
+            <div class="c6"></div>
+        </figure>
+    </div>
+    <div id="player-container-akaset" style="position:absolute;top:0;bottom:0;left:0;right:0;z-index:15;"></div>
+    <div id="player-container-background1" style="position:absolute;top:0;bottom:0;left:0;right:0;z-index:10"></div>
+    <div id="player-container-background2" style="position:absolute;top:0;bottom:0;left:0;right:0;z-index:9"></div>
+    <div id="background-image"
+        style="position:absolute;top:0;bottom:0;left:0;right:0;z-index:5;background-image:url(assets/Akaset_S4_Spine_BG.png);background-size:cover;background-position: center center;">
+    </div>
+    <div id="background-colors"
+        style="position:absolute;top:0;bottom:0;left:0;right:0;z-index:4;background-image:linear-gradient(30deg,#3c54ff,#a2eded 60%,#d3fcfc 90%,#ffffff);background-size:cover;background-position: center center;">
+    </div>
+    </div>
+
+</body>
+
+<script>
+    var cover = document.getElementById('click-cover');
+    var w = cover.clientWidth;
+    var h = cover.clientHeight;
+    var configured = false;
+    var clip_ratio = function (ox, oy, ow, oh, twh, sw, sh) {
+        var swh = sw / sh;
+        twh = ow / oh;
+        if (swh > twh) {
+            return {
+                x: ox,
+                y: oy + (oh - ow / swh) / 2,
+                w: ow,
+                h: ow / swh
+            };
+        } else {
+            return {
+                x: ox + (ow - oh * swh) / 2,
+                y: oy,
+                w: oh * swh,
+                h: oh
+            };
+        }
+
+    };
+    var viewport_akaset;
+    var viewport_background;
+    var akaset;
+    var background1;
+    var background2;
+    var left_shift = -0.4;
+    var top_shift = -0.2;
+    var akaset_size = 1.0;
+    var plant_left_shift = 0.0;
+    var plant_top_shift = 0.0;
+    var plant_size = 1.0;
+    var jellyfish_left_shift = 0.0;
+    var jellyfish_top_shift = 0.0;
+    var jellyfish_size = 1.0;
+    var enable_touch_box_mood = true;
+    var touch_box_mood_border = false;
+    var touch_box_mood_l = 63;
+    var touch_box_mood_t = 30;
+    var touch_box_mood_w = 10;
+    var touch_box_mood_h = 18;
+    var enable_touch_box_shy1 = true;
+    var touch_box_shy1_border = false;
+    var touch_box_shy1_l = 23;
+    var touch_box_shy1_t = 66;
+    var touch_box_shy1_w = 15;
+    var touch_box_shy1_h = 23;
+    var enable_touch_box_shy2 = true;
+    var touch_box_shy2_border = false;
+    var touch_box_shy2_l = 43;
+    var touch_box_shy2_t = 57;
+    var touch_box_shy2_w = 14;
+    var touch_box_shy2_h = 20;
+    var enable_touch_box_shy3 = true;
+    var touch_box_shy3_border = false;
+    var touch_box_shy3_l = 55;
+    var touch_box_shy3_t = 47;
+    var touch_box_shy3_w = 10;
+    var touch_box_shy3_h = 10;
+    var l2d;
+    var animationspeed = 1.0;
+    var bubblespeed = 1.0;
+    var lastMillis = Date.now();
+    var timeregreeting = 120;
+    var backgrounddebrisuplevel;
+    var futuristicclock = true;
+    var enablefuturisticpanel = false;
+    var backgroundcolor = "linear-gradient(30deg,#3c54ff,#a2eded 60%,#d3fcfc 90%,#ffffff)";
+    var panel_interval = -1;
+    var clockleft = 85;
+    var clocktop = 80;
+    var clock_interval = -1;
+    var astro_interval = -1;
+    var clock_count = 0;
+    var lon = 120;
+    var lat = 35;
+    var rip;
+    var panelsize = 0.6;
+    var panelleft = 0;
+    var paneltop = 0;
+    var clocksize = 0.6;
+    var blinkfix = false;
+    var spineanimation = true;
+    var usewebglbackground = false;
+    var audioplayerstate = false;
+    var enableterminal = false;
+
+    var enableray = false;
+    var enablefisheffect = false;
+    var enablewatereffect = false;
+    var enablebubble = false;
+    var fishleftheight = 0.6;
+    var fishrightheight = 0.1;
+    var control1x = -0.3;
+    var control1y = -0.5;
+    var control2x = 0.4;
+    var control2y = -0.4;
+    var playingorder = 0;
+    var playingstate = 0;
+    var current_audio = 0;
+
+    function timeFormat(number) {
+        var minute = parseInt(number / 60);
+        var second = parseInt(number % 60);
+        minute = minute >= 10 ? minute : "0" + minute;
+        second = second >= 10 ? second : "0" + second;
+        return minute + ":" + second;
+    }
+    var getTimeString = function () {
+        clock_count++;
+        var splitter = (clock_count % 11 >= 6) ? ":" : " ";
+        var d = new Date();
+        var s = "";
+        var t = d.getHours();
+        s += ((t < 10) ? "0" + t : "" + t) + splitter;
+        t = d.getMinutes();
+        s += ((t < 10) ? "0" + t : "" + t) + splitter;
+        t = d.getSeconds();
+        s += ((t < 10) ? "0" + t : "" + t);
+        return s;
+    };
+    viewport_akaset = clip_ratio(-2363.85, -216.32, 3407.64, 2123.11, 16.0 / 9.0, w, h);
+    viewport_jellyfish = clip_ratio(-1705.24, -550.60, 3092.733, 1982.54, 16.0 / 9.0, w, h);
+    viewport_plant = clip_ratio(-1600.04, -416.54, 3347.09, 1702.38, 16.0 / 9.0, w, h);
+    akaset = new spine.SpinePlayer("player-container-akaset", {
+        skelUrl: "assets/SoulDress_Akaset_04.skel",
+        atlasUrl: "assets/SoulDress_Akaset_04.atlas",
+        premultipliedAlpha: true,
+        animation: "idle",
+        viewport: {
+            x: viewport_akaset.x,
+            y: viewport_akaset.y,
+            width: viewport_akaset.w,
+            height: viewport_akaset.h,
+            padLeft: "0%",
+            padRight: "0%",
+            padTop: "0%",
+            padBottom: "0%"
+        },
+        alpha: true,
+        backgroundColor: "#00000000",
+        showControls: false,
+        defaultMix: 1
+    });
+    background1 = new spine.SpinePlayer("player-container-background1", {
+        skelUrl: "assets/SoulDress_Akaset_04_Bg01.skel",
+        atlasUrl: "assets/SoulDress_Akaset_04_Bg01.atlas",
+        premultipliedAlpha: true,
+        animation: "animation",
+        viewport: {
+            x: viewport_jellyfish.x,
+            y: viewport_jellyfish.y,
+            width: viewport_jellyfish.w,
+            height: viewport_jellyfish.h,
+            padLeft: "0%",
+            padRight: "0%",
+            padTop: "0%",
+            padBottom: "0%"
+        },
+        alpha: true,
+        backgroundColor: "#00000000",
+        showControls: false
+    });
+    background2 = new spine.SpinePlayer("player-container-background2", {
+        skelUrl: "assets/SoulDress_Akaset_04_Bg02.skel",
+        atlasUrl: "assets/SoulDress_Akaset_04_Bg02.atlas",
+        premultipliedAlpha: true,
+        animation: "animation",
+        viewport: {
+            x: viewport_plant.x,
+            y: viewport_plant.y,
+            width: viewport_plant.w,
+            height: viewport_plant.h,
+            padLeft: "0%",
+            padRight: "0%",
+            padTop: "0%",
+            padBottom: "0%"
+        },
+        alpha: true,
+        backgroundColor: "#00000000",
+        showControls: false
+    });
+
+    var imitateClick = function (mouse_event, oElement, iClientX, iClientY) {
+        var oEvent;
+        if (document.createEventObject) { //For IE
+            oEvent = document.createEventObject();
+            oEvent.clientX = iClientX;
+            oEvent.clientY = iClientY;
+            oElement.fireEvent("onclick", oEvent);
+        } else {
+            oEvent = document.createEvent("MouseEvents");
+            oEvent.initMouseEvent(mouse_event, true, true, document.defaultView, 0, 0, 0,
+                iClientX, iClientY /*, false, false, false, false, 0, null*/);
+            oElement.dispatchEvent(oEvent);
+        }
+    };
+
+    var set_viewport = function (spine, viewport) {
+        spine.config.viewport.x = viewport.x;
+        spine.config.viewport.y = viewport.y;
+        spine.config.viewport.width = viewport.w;
+        spine.config.viewport.height = viewport.h;
+        spine.currentViewport.x = viewport.x;
+        spine.currentViewport.y = viewport.y;
+        spine.currentViewport.width = viewport.w;
+        spine.currentViewport.height = viewport.h;
+    };
+    var play_back = function (delay, spine, new_pose, return_pose) {
+        window.setTimeout(function () {
+            spine.animationState.setAnimation(0, new_pose, false);
+            spine.animationState.addAnimation(0, return_pose, true, 0);
+        }, delay);
+    };
+
+    document.getElementById("click-cover").onclick = function () {
+        if (Date.now() - lastMillis > timeregreeting * 1000) {
+            play_back(400, akaset, "greet", "idle");
+            if (l2d)
+                l2d.start();
+        }
+        lastMillis = Date.now();
+    };
+    document.getElementById("touchbox-mood").onclick = function () {
+        if (enable_touch_box_mood)
+            play_back(400, akaset, "chat", "idle");
+    };
+    document.getElementById("touchbox-shy1").onclick = function () {
+        if (enable_touch_box_shy1)
+            play_back(400, akaset, "touch1", "idle");
+    };
+    document.getElementById("touchbox-shy2").onclick = function () {
+        if (enable_touch_box_shy2)
+            play_back(400, akaset, "touch2", "idle");
+    };
+    document.getElementById("touchbox-shy3").onclick = function () {
+        if (enable_touch_box_shy3)
+            play_back(400, akaset, "touch3", "idle");
+    };
+
+
+    var touch_box_mood = document.getElementById("touchbox-mood");
+    touch_box_mood.style.left = touch_box_mood_l + "%";
+    touch_box_mood.style.top = touch_box_mood_t + "%";
+    touch_box_mood.style.width = touch_box_mood_w + "%";
+    touch_box_mood.style.height = touch_box_mood_h + "%";
+    document.getElementById("touchbox-mood-inner").style.display = touch_box_mood_border ? "inline" : "none";
+    var touch_box_shy1 = document.getElementById("touchbox-shy1");
+    touch_box_shy1.style.left = touch_box_shy1_l + "%";
+    touch_box_shy1.style.top = touch_box_shy1_t + "%";
+    touch_box_shy1.style.width = touch_box_shy1_w + "%";
+    touch_box_shy1.style.height = touch_box_shy1_h + "%";
+    document.getElementById("touchbox-shy1-inner").style.display = touch_box_shy1_border ? "inline" : "none";
+    var touch_box_shy2 = document.getElementById("touchbox-shy2");
+    touch_box_shy2.style.left = touch_box_shy2_l + "%";
+    touch_box_shy2.style.top = touch_box_shy2_t + "%";
+    touch_box_shy2.style.width = touch_box_shy2_w + "%";
+    touch_box_shy2.style.height = touch_box_shy2_h + "%";
+    document.getElementById("touchbox-shy2-inner").style.display = touch_box_shy2_border ? "inline" : "none";
+    var touch_box_shy3 = document.getElementById("touchbox-shy3");
+    touch_box_shy3.style.left = touch_box_shy3_l + "%";
+    touch_box_shy3.style.top = touch_box_shy3_t + "%";
+    touch_box_shy3.style.width = touch_box_shy3_w + "%";
+    touch_box_shy3.style.height = touch_box_shy3_h + "%";
+
+    document.getElementById("touchbox-shy3-inner").style.display = touch_box_shy3_border ? "inline" : "none";
+    document.getElementById("background-image").style.display = usewebglbackground ? "none" : "block";
+    document.getElementById("clock").style.display = futuristicclock ? "inline" : "none";
+    document.getElementById("clock-wrapper").style.left = clockleft + "%";
+    document.getElementById("clock-wrapper").style.top = clocktop + "%";
+    document.getElementById("clock-wrapper").style.transform = "scale(" + clocksize + "," + clocksize + ")";
+    document.getElementById('text-inner').style.lineHeight = document.getElementById('text-inner').clientHeight + 'px';
+    document.getElementById('background-colors').style.backgroundImage = backgroundcolor;
+
+    if (futuristicclock) {
+        if (clock_interval == -1)
+            clock_interval = window.setInterval(function () {
+                document.getElementById("text-inner").innerHTML = getTimeString();
+            }, 200);
+    } else {
+        clearInterval(clock_interval);
+        clock_interval = -1;
+    }
+    var width_transformed = 3407.64 / akaset_size;
+    var height_transformed = 2123.11 / akaset_size;
+    var left_transformed = (-2363.85 + 3407.64 / 2) - width_transformed / 2;
+    var bottom_transformed = (-216.32 + 2123.11 / 2) - height_transformed / 2;
+    viewport_akaset = clip_ratio(left_transformed - width_transformed / 2 * left_shift, bottom_transformed + height_transformed / 2 * top_shift, width_transformed, height_transformed, 16.0 / 9.0, w, h);
+    var width_transformed = 3092.733 / jellyfish_size;
+    var height_transformed = 1982.54 / jellyfish_size;
+    var left_transformed = (-1705.24 + 3092.733 / 2) - width_transformed / 2;
+    var bottom_transformed = (-550.60 + 1982.54 / 2) - height_transformed / 2;
+    viewport_jellyfish = clip_ratio(left_transformed - width_transformed / 2 * jellyfish_left_shift, bottom_transformed + height_transformed / 2 * jellyfish_top_shift, width_transformed, height_transformed, 16.0 / 9.0, w, h);
+    viewport_background_debris = clip_ratio(-1705.24, -550.602 - backgrounddebrisuplevel, 3092.733, 1982.54, 16.0 / 9.0, w, h);
+    var width_transformed = 3347.09 / plant_size;
+    var height_transformed = 1702.38 / plant_size;
+    var left_transformed = (-1600.04 + 3347.09 / 2) - width_transformed / 2;
+    var bottom_transformed = (-416.54 + 1702.38 / 2) - height_transformed / 2;
+    viewport_plant = clip_ratio(left_transformed - width_transformed / 2 * plant_left_shift, bottom_transformed + height_transformed / 2 * plant_top_shift, width_transformed, height_transformed, 16.0 / 9.0, w, h);
+    viewport_background_debris = clip_ratio(-1600.04, -416.54 - backgrounddebrisuplevel, 3347.09, 1702.38, 16.0 / 9.0, w, h);
+
+    try {
+        set_viewport(akaset, viewport_akaset);
+        set_viewport(background1, viewport_jellyfish);
+        set_viewport(background2, viewport_plant);
+        akaset.speed = animationspeed;
+        background1.speed = animationspeed;
+        background2.speed = animationspeed;
+    } catch (e) {
+        console.log(e);
+    }
+    if (!configured) {
+        configured = true;
+        play_back(1500, akaset, "greet", "idle");
+
+
+
+    }
+    background1.pause();
+    background2.pause();
+    var x_ema = 0.0;
+    var y_ema = 0.0;
+    const ema_rate = 0.97;
+    const acl = new Accelerometer({ frequency: 60 });
+    acl.addEventListener("reading", () => {
+        x_ema = x_ema * ema_rate + (1.0 - ema_rate) * acl.x;
+        y_ema = y_ema * ema_rate + (1.0 - ema_rate) * acl.y;
+        var width_transformed = 3407.64 / akaset_size;
+        var height_transformed = 2123.11 / akaset_size;
+        var left_transformed = (-2363.85 + 3407.64 / 2) - width_transformed / 2;
+        var bottom_transformed = (-216.32 + 2123.11 / 2) - height_transformed / 2;
+        viewport_akaset = clip_ratio(left_transformed - width_transformed / 2 * (left_shift + y_ema / 30.0), bottom_transformed + height_transformed / 2 * (top_shift - 0.2 + x_ema / 30.0), width_transformed, height_transformed, 16.0 / 9.0, w, h);
+        try{
+            set_viewport(akaset, viewport_akaset);
+        }catch(e){
+            console.log(e);
+        }
+    });
+
+    acl.start();
+
+
+
+</script>
+
+</html>
