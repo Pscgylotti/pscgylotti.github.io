@@ -1,0 +1,111 @@
+
+SoulDress_Akaset_04_Bg01.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shanguang3
+  rotate: false
+  xy: 1261, 3
+  size: 219, 91
+  orig: 237, 99
+  offset: 5, 1
+  index: -1
+shanhu2
+  rotate: true
+  xy: 571, 515
+  size: 424, 468
+  orig: 424, 468
+  offset: 0, 0
+  index: -1
+shanhu3
+  rotate: true
+  xy: 1042, 451
+  size: 487, 308
+  orig: 487, 308
+  offset: 0, 0
+  index: -1
+shuimu11
+  rotate: false
+  xy: 1568, 59
+  size: 288, 283
+  orig: 288, 283
+  offset: 0, 0
+  index: -1
+shuimu121
+  rotate: false
+  xy: 2, 303
+  size: 857, 211
+  orig: 857, 211
+  offset: 0, 0
+  index: -1
+shuimu122
+  rotate: 180
+  xy: 291, 4
+  size: 764, 297
+  orig: 764, 297
+  offset: 0, 0
+  index: -1
+shuimu123
+  rotate: false
+  xy: 861, 245
+  size: 705, 204
+  orig: 705, 204
+  offset: 0, 0
+  index: -1
+shuimu13
+  rotate: false
+  xy: 2, 18
+  size: 288, 283
+  orig: 288, 283
+  offset: 0, 0
+  index: -1
+shuimu21
+  rotate: false
+  xy: 573, 102
+  size: 202, 199
+  orig: 202, 199
+  offset: 0, 0
+  index: -1
+shuimu221
+  rotate: true
+  xy: 1644, 343
+  size: 595, 147
+  orig: 595, 147
+  offset: 0, 0
+  index: -1
+shuimu222
+  rotate: false
+  xy: 2, 546
+  size: 568, 392
+  orig: 568, 392
+  offset: 0, 0
+  index: -1
+shuimu23
+  rotate: false
+  xy: 1057, 45
+  size: 202, 199
+  orig: 202, 199
+  offset: 0, 0
+  index: -1
+shuimu31
+  rotate: false
+  xy: 1261, 96
+  size: 150, 148
+  orig: 150, 148
+  offset: 0, 0
+  index: -1
+shuimu32
+  rotate: true
+  xy: 1352, 452
+  size: 480, 291
+  orig: 480, 291
+  offset: 0, 0
+  index: -1
+shuimu33
+  rotate: false
+  xy: 1412, 96
+  size: 150, 148
+  orig: 150, 148
+  offset: 0, 0
+  index: -1

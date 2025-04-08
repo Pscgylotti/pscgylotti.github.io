@@ -1,0 +1,204 @@
+{
+  "Version": 3,
+  "Type": 0,
+  "FileReferences": {
+    "Moc": "moc.moc3",
+    "Textures": [
+      "textures/Akaset_texture_00.png"
+    ],
+    "Physics": "moc.physics3.json",
+    "PhysicsV2": {
+      "File": "moc.physics3.json"
+    },
+    "Motions": {
+      "TapDREFTouchBoxBra": [
+        {
+          "File": "motions/CH_Akaset@Live2D_Shy_Complete.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_TCH1_Bra.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_TCH2_Bra.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Angry_Complete.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Wordless_Complete.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_fashion3_2.motion3.json"
+        }
+      ],
+      "Start": [
+        {
+          "File": "motions/CH_Akaset@Live2D_Greet1.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Greet2.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Greet3.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Greet4.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Greet_Sad1.motion3.json"
+        }
+      ],
+      "TapDREFTouchBoxHandL": [
+        {
+          "File": "motions/CH_Akaset@Live2D_TCH1_Hand.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_TCH2_Hand.motion3.json"
+        }
+      ],
+      "TapDREFTouchBoxHandR": [
+        {
+          "File": "motions/CH_Akaset@Live2D_TCH1_Hand.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_TCH2_Hand.motion3.json"
+        }
+      ],
+      "TapDREFTouchBoxHip": [
+        {
+          "File": "motions/CH_Akaset@Live2D_Angry_Complete.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Shy_Complete.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_TCH2_Hip.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Terrified_Complete.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_TCH1_Hip.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Wordless_Complete.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_fashion3_3.motion3.json"
+        }
+      ],
+      "TapDREFTouchBoxHead": [
+        {
+          "File": "motions/CH_Akaset@Live2D_Insert01.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Insert02.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Insert03.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Joyful_Complete.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Vexedly_Complete.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_TCH1_Head.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_TCH2_Head.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_TCH3_Head.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Insert04.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Insert05.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_fashion3_1.motion3.json"
+        }
+      ],
+      "Idle": [
+        {
+          "File": "motions/CH_Akaset@Live2D_Standby1.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Standby2.motion3.json"
+        },
+        {
+          "File": "motions/CH_Akaset@Live2D_Standby_Sad1.motion3.json"
+        }
+      ]
+    }
+  },
+  "Controllers": {
+    "ParamHit": {},
+    "ParamLoop": {},
+    "KeyTrigger": {},
+    "ParamTrigger": {},
+    "AreaTrigger": {},
+    "HandTrigger": {},
+    "EyeBlink": {
+      "MinInterval": 500,
+      "MaxInterval": 6000,
+      "Enabled": true
+    },
+    "LipSync": {
+      "Gain": 5.0
+    },
+    "MouseTracking": {
+      "SmoothTime": 0.15,
+      "Enabled": true
+    },
+    "AutoBreath": {
+      "Enabled": true
+    },
+    "ExtraMotion": {
+      "Enabled": true
+    },
+    "Accelerometer": {
+      "Enabled": true
+    },
+    "Microphone": {},
+    "Transform": {},
+    "FaceTracking": {
+      "Enabled": true
+    },
+    "HandTracking": {},
+    "ParamValue": {},
+    "PartOpacity": {},
+    "ArtmeshOpacity": {},
+    "ArtmeshColor": {},
+    "ArtmeshCulling": {
+      "DefaultMode": 0
+    },
+    "IntimacySystem": {}
+  },
+  "HitAreas": [
+    {
+      "Name": "DREFTouchBoxBra",
+      "Id": "DREFTouchBoxBra"
+    },
+    {
+      "Name": "DREFTouchBoxHandL",
+      "Id": "DREFTouchBoxHandL"
+    },
+    {
+      "Name": "DREFTouchBoxHandR",
+      "Id": "DREFTouchBoxHandR"
+    },
+    {
+      "Name": "DREFTouchBoxHip",
+      "Id": "DREFTouchBoxHip"
+    },
+    {
+      "Name": "DREFTouchBoxHead",
+      "Id": "DREFTouchBoxHead"
+    }
+  ],
+  "Options": {}
+}
