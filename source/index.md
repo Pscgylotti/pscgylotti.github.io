@@ -4,7 +4,7 @@ date: 2023-07-18
 type: "Home"
 ---
 
-### Brief
+### Brief 
 
 I am a student major in CS <span style="color:blue" title="Year 2023">now</span>
 
